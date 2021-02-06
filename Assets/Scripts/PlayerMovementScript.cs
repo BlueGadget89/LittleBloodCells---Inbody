@@ -21,11 +21,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Jump();
-
-        //Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        //transform.position += movement * Time.deltaTime * moveSpeed;
-
+        
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             GetComponent<Rigidbody2D>().AddForce(rightMoveForce);
@@ -53,25 +49,8 @@ public class PlayerMovementScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             GetComponent<Rigidbody2D>().AddForce(jumpForce);
-
-            //doubleJump += 1;
-            //if (canJump == true)
-            //{
-                //GetComponent<Rigidbody2D>().AddForce(jumpForce);
-            //}
-            //if (doubleJump >= 2)
-            //{
-                //doubleJump = 0;
-                //canJump = false;
-            //}
+           
         }
     }
 
-    //void Jump()
-    //{
-        //if (Input.GetButtonDown("Jump"))
-        //{
-            //gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
-        //}
-    //}
 }

@@ -42,7 +42,7 @@ public class GrabController1 : MonoBehaviour
 				
 			}
 
-			//if B is pressed let go off item and make grabbed = false
+			//if B is pressed again let go off item and make grabbed = false
 			else if (!Physics2D.OverlapPoint(holdpoint.position, notgrabbed))
 			{
 				grabbed = false;
