@@ -1,0 +1,89 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovementScript : MonoBehaviour
+{
+
+    public bool gameover = false; 
+    //movement things
+    public float moveSpeed = 5f;
+    public float JumpForce = 10f;
+    public bool canjump;
+    //Hp and damgage
+    public int playerHp = 3;
+    public float deathzone;
+    public Vector3 Spwan;// where player spwans
+    //attack
+    public GameObject outcome;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameObject.GetComponent<Transform>().position = Spwan;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+
+        Vector3 playerPos = gameObject.GetComponent<Transform>().position;
+
+        if (gameover == false)
+        {
+            if(playerHp <= 0)
+            {
+                gameover = true; 
+            }
+            if (gameObject.transform.position.y < deathzone)//falling 
+            {
+                gameObject.GetComponent<Transform>().position = Spwan;
+                playerHp -= 1;
+            }
+            if (canjump)
+            {
+                Jump();
+            }
+            move();
+          
+            
+        }
+        else if (gameover == true)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+            canjump = false;
+        }
+    }
+   
+    private void OnCollisionEnter2D(Collision2D collision) // triggers the jump to reset
+    {
+        canjump = true;
+    }
+    void move()
+    {
+        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moveing left and right
+        transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moveing part" aka where the value gets add
+
+        if (movementInput.x > 0) {
+            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (movementInput.x < 0)
+        {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+
+    }
+
+}
