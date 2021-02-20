@@ -11,7 +11,7 @@ public class PlayerMovementScript : MonoBehaviour
     public float JumpForce = 10f;
     public bool canjump;
     //Hp and damgage
-    public int playerHp = 3;
+    public int playerHp;
     public float deathzone;
     public Vector3 Spwan;// where player spwans
     //attack
@@ -22,6 +22,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Transform>().position = Spwan;
+        playerHp = 3; 
     }
 
     // Update is called once per frame
@@ -69,6 +70,7 @@ public class PlayerMovementScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) // triggers the jump to reset
     {
         canjump = true;
+        
     }
     void move()
     {
@@ -85,5 +87,5 @@ public class PlayerMovementScript : MonoBehaviour
 
 
     }
-
+   
 }

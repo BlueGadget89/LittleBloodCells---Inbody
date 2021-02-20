@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class enemyM : MonoBehaviour
 {
+    public GameObject Player;
+
     //Dictates how fast the entity will move across the platform
     public float speed;
     //Dictate which direction the entity must move once it reaches the edge of the platform
@@ -14,7 +16,6 @@ public class enemyM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -40,4 +41,19 @@ public class enemyM : MonoBehaviour
             }
         }
     }
+
+
+
+  
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == ("bullet"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        
+    }
+
 }

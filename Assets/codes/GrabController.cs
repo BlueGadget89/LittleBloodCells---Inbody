@@ -7,6 +7,7 @@ public class GrabController : MonoBehaviour
 
     public GameObject GP; // Grap point
     public bool onpiece;
+    public bool havepiece;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,7 @@ public class GrabController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (onpiece && Input.GetKey(KeyCode.E))
-        {
-            Debug.Log("hit");
-            
-        }
+     
 
     }
 
@@ -43,10 +40,13 @@ public class GrabController : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (onpiece && Input.GetKey(KeyCode.Q))
+        if (other.gameObject.tag == "pieces" &&!havepiece && onpiece && Input.GetKey(KeyCode.Q))
         {
             other.gameObject.transform.position = GP.transform.position;
+            Destroy(other.gameObject.GetComponent<Rigidbody2D>());
+            //Destroy(other.gameObject.GetComponent<PolygonCollider2D>());
             other.gameObject.transform.SetParent(GP.transform);
+            havepiece = true; 
         }
     }
 }

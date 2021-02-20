@@ -40,11 +40,11 @@ public class bullet_behavior : MonoBehaviour
             //GetComponent<Rigidbody2D>().velocity = new Vector3(direction.x * BS, direction.y * BS, 0);
             //GetComponent<Rigidbody2D>().velocity = Vector3.Angle(transform.forward, direction);
 
-        }
-
-
-       
-
+        }       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject); 
     }
 
 
