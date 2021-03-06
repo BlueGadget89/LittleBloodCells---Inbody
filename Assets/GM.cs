@@ -52,7 +52,7 @@ public class GM : MonoBehaviour
         // spwaning enemys
         Instantiate(enemy, Sp1, Quaternion.identity);
         Instantiate(enemy, Sp2, Quaternion.identity);
-        Instantiate(enemy, Sp3, Quaternion.Euler(0, 0, 180));// needs to turn 180 on Z
+        Instantiate(enemy, Sp3, Quaternion.identity);
         Instantiate(enemy, Sp4, Quaternion.identity);
         Instantiate(enemy, Sp5, Quaternion.identity);
         Instantiate(enemy, Sp6, Quaternion.identity);
