@@ -55,6 +55,10 @@ public class PlayerMovementScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (canjump == false)
+        {
+            GetComponent<Animator>().Play("Jump");
+        }
 
     }
 
@@ -64,13 +68,18 @@ public class PlayerMovementScript : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             canjump = false;
+            GetComponent<Animator>().Play("Jump");
         }
     }
    
     private void OnCollisionEnter2D(Collision2D collision) // triggers the jump to reset
     {
         canjump = true;
-        
+        if (canjump == true)
+        {
+            GetComponent<Animator>().Play("Idle");
+        }
+
     }
     void move()
     {
@@ -79,10 +88,20 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (movementInput.x > 0) {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            GetComponent<Animator>().Play("PlayerMovement");
         }
         else if (movementInput.x < 0)
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            GetComponent<Animator>().Play("PlayerMovement");
+        }
+
+        if (movementInput.x == 0)
+        {
+            if (canjump == true)
+            {
+                GetComponent<Animator>().Play("Idle");
+            }
         }
 
 

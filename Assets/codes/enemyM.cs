@@ -40,6 +40,8 @@ public class enemyM : MonoBehaviour
                 movingRight = true;
             }
         }
+
+        GetComponent<Animator>().Play("EnemyMovement");
     }
 
 
