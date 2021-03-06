@@ -16,6 +16,7 @@ public class PlayerMovementScript : MonoBehaviour
     public Vector3 Spwan;// where player spwans
     //attack
     public GameObject outcome;
+    public float loseTimer;
 
 
     // Start is called before the first frame update
@@ -59,6 +60,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<Animator>().Play("Jump");
         }
+        
 
     }
 

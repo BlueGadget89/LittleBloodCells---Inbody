@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GM : MonoBehaviour
@@ -12,6 +13,8 @@ public class GM : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
+
+    public float loseTimer;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +40,15 @@ public class GM : MonoBehaviour
         if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
         {
             Destroy(heart3);
+        }
+
+        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
+        {
+            loseTimer += Time.deltaTime;
+            if (loseTimer >= 2f)
+            {
+                SceneManager.LoadScene("HandGameOverScreen");
+            }
         }
     }
     void spwaner()

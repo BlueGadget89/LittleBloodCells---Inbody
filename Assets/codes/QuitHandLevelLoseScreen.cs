@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneRestartScript : MonoBehaviour
+public class QuitHandLevelLoseScreen : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,10 +19,10 @@ public class SceneRestartScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("Scene is reset");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("StartMenuScene");
         }
     }
     private void OnMouseEnter()

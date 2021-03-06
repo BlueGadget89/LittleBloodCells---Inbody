@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hand_Level.unity
     guid: a7f8aafbcdc684f5d856d3283aa84573
+  - enabled: 1
+    path: Assets/Scenes/HandGameOverScreen.unity
+    guid: 710a695601a8f422aaf56f71bdda217b
   m_configObjects: {}
