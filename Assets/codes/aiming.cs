@@ -9,6 +9,8 @@ public class aiming : MonoBehaviour
     public GameObject outcome;
     public float angle;
     public float adjestment;
+    public GameObject Player;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class aiming : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; // trig and the angle caclualtion
         transform.rotation = Quaternion.Euler(0, 0, angle + adjestment);
 
+       
+
         //shoting
         if (Input.GetMouseButtonDown(0))
         {
@@ -33,6 +37,16 @@ public class aiming : MonoBehaviour
             Vector3 outcomepos = outcome.GetComponent<Transform>().position;
 
             Instantiate(bullet, outcomepos, transform.rotation);
+
+            if (mousePos.x - Player.GetComponent<Transform>().rotation.x > 0)
+            {
+                Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            }
+            if (mousePos.x - Player.GetComponent<Transform>().rotation.x <= 0)
+            {
+                Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+            }
+
         }
     }
     

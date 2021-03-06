@@ -24,7 +24,7 @@ public class enemyM : MonoBehaviour
         //This is the automatic movement function for the entity.
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         //Sets the origin, direction and length of the raycast detector, respectively to items in parantheses
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 1.6f);
         //Tells the item when to switch directions
         if (groundInfo.collider == false)
         {

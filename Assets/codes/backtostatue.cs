@@ -9,6 +9,8 @@ public class backtostatue : MonoBehaviour
     public GameObject statue;
     public GameObject Graper;
     public GameObject pieces;
+    public Vector3 spawnPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,12 @@ public class backtostatue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
+        if(gameObject.transform.position.y <= -6.89)
+        {
+            transform.position = new Vector3(spawnPos.x, spawnPos.y, 0);
+        }
+        */
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
