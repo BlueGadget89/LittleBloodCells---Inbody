@@ -1198,6 +1198,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 515626142}
   spawnPos: {x: -17.39, y: 2.48, z: 0}
+  gameManager: {fileID: 0}
 --- !u!60 &194449002
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2315,6 +2316,41 @@ PrefabInstance:
       propertyPath: JumpForce
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: playerDamageDetector
+      value: 
+      objectReference: {fileID: 1561626396}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: OriginalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: OriginalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: OriginalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: damageColor.r
+      value: 0.6367924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: damageColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: damageColor.b
+      value: 0.9743553
+      objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,6 +2406,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345731, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: m_SortingOrder
@@ -2381,6 +2427,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3214613488661881031, guid: 0964a1ba5150348e6bfc7081ccd1d3c4,
         type: 3}
+    - target: {fileID: 4298148357543345731, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345731, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: m_Name
@@ -3148,6 +3204,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 87309965}
   spawnPos: {x: 6.07, y: 8.62, z: 0}
+  gameManager: {fileID: 0}
 --- !u!60 &1130306311
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3601,6 +3658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1545296678}
+  playerDamageDetector: {fileID: 1561626396}
 --- !u!1 &1144439860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4111,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 340347746}
   spawnPos: {x: -0.77, y: -1.28, z: 0}
+  gameManager: {fileID: 0}
 --- !u!212 &1171796113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4364,6 +4423,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 1144439860}
   spawnPos: {x: -19.34, y: 9.01, z: 0}
+  gameManager: {fileID: 0}
 --- !u!60 &1280332152
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4732,10 +4792,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8037232603001120104, guid: 978b836dc3fca447891a3a0e67954d07, type: 3}
-  Player: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5, type: 3}
+  Player: {fileID: 1545296678}
   heart1: {fileID: 1138167380}
   heart2: {fileID: 1495198038}
   heart3: {fileID: 1608838347}
+  loseTimer: 0
+  pieceCount: 0
 --- !u!4 &1281389739
 Transform:
   m_ObjectHideFlags: 0
@@ -5013,6 +5075,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 742156093}
   spawnPos: {x: 4.49, y: 1.84, z: 0}
+  gameManager: {fileID: 0}
 --- !u!60 &1461491889
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5337,6 +5400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1545296678}
+  playerDamageDetector: {fileID: 1561626396}
 --- !u!1 &1508637808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,6 +5439,7 @@ MonoBehaviour:
   Graper: {fileID: 0}
   pieces: {fileID: 343760298}
   spawnPos: {x: -12.03, y: -1.39, z: 0}
+  gameManager: {fileID: 0}
 --- !u!60 &1508637810
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5767,6 +5832,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1561626396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 665302732820590003, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 603442699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1573914771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,6 +6012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1545296678}
+  playerDamageDetector: {fileID: 1561626396}
 --- !u!1 &1731499255
 GameObject:
   m_ObjectHideFlags: 0
