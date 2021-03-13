@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-
+    
     public bool gameover = false; 
     //movement things
     public float moveSpeed = 5f;
@@ -16,7 +16,7 @@ public class PlayerMovementScript : MonoBehaviour
     public Vector3 Spwan;// where player spwans
     //attack
     public GameObject outcome;
-    public float loseTimer;
+    public Transform Q;
 
 
     // Start is called before the first frame update
@@ -32,10 +32,10 @@ public class PlayerMovementScript : MonoBehaviour
         
 
         Vector3 playerPos = gameObject.GetComponent<Transform>().position;
-
         if (gameover == false)
         {
-            if(playerHp <= 0)
+            Q.transform.rotation = Quaternion.Euler(0.0f, 0.0f, gameObject.transform.rotation.z * -1.0f);
+            if (playerHp <= 0)
             {
                 gameover = true; 
             }
