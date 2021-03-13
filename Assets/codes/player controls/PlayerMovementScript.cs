@@ -16,11 +16,11 @@ public class PlayerMovementScript : MonoBehaviour
     public Vector3 Spwan;// where player spwans
     //attack
     public GameObject outcome;
-<<<<<<< HEAD
+//<<<<<<< HEAD
     public Transform Q;
-=======
+//=======
     public float loseTimer;
->>>>>>> TimothyPC
+//cn>>>>>>> TimothyPC
 
 
     // Start is called before the first frame update
