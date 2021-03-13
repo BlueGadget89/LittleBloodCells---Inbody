@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Puzzle
+  - Box
+  - Statue
+  - pieces
+  - player
+  - bullet
+  - enemy
   layers:
   - Default
   - TransparentFX
