@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyM : MonoBehaviour
 {
     public GameObject Player;
-
+    public AudioSource audio;
     //Dictates how fast the entity will move across the platform
     public float speed;
     //Dictate which direction the entity must move once it reaches the edge of the platform
@@ -52,10 +52,14 @@ public class enemyM : MonoBehaviour
     {
         if (other.gameObject.tag == ("bullet"))
         {
+            audio.Play();
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject.GetComponent<Rigidbody2D>());
+            Destroy(gameObject.GetComponent<CircleCollider2D>());
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
         }
-        
+
     }
 
 }

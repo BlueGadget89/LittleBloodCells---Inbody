@@ -32,9 +32,9 @@ public class bullet_behavior : MonoBehaviour
 
         // Debug.Log(direction);
         timer += Time.deltaTime;
-        if (timer >= 2) { Destroy(gameObject); }
+        if (timer >= .3f) { Destroy(gameObject); }
 
-        else if(timer <= 2)
+        else if(timer <= .3f)
         {
             transform.Translate(Vector2.right * BS * Time.deltaTime);
             //GetComponent<Rigidbody2D>().velocity = new Vector3(direction.x * BS, direction.y * BS, 0);
