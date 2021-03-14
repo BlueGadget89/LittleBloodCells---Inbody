@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 0.72, y: 0.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &8681610781122627722
@@ -205,7 +205,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4298148357461200215
@@ -225,6 +225,7 @@ MonoBehaviour:
   outcome: {fileID: 0}
   angle: 0
   adjestment: 0
+  Player: {fileID: 0}
 --- !u!1 &4298148357543345734
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,17 +343,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4298148357543345734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d813a2116c09743ab3c6297af0a291, type: 3}
+  m_Script: {fileID: 11500000, guid: 02f9f404efd7ca94897479f24a9bcc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: 0
   moveSpeed: 5
-  JumpForce: 20
+  JumpForce: 10
   canjump: 0
   playerHp: 3
   deathzone: -6.89
-  Spwan: {x: 0, y: 1.5, z: 0}
+  Spwan: {x: 0, y: 1.35, z: 0}
   outcome: {fileID: 0}
+  loseTimer: 0
 --- !u!61 &-4990929643846371432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -458,7 +460,7 @@ SpriteRenderer:
   m_Size: {x: 0.72, y: 0.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &4298148357859099070

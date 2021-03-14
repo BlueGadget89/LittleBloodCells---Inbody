@@ -29,19 +29,7 @@ public class GM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 2)
-        {
-            Destroy(heart1);
-        }
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 1)
-        {
-            Destroy(heart2);
-        }
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
-        {
-            Destroy(heart3);
-        }
-
+        
         if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
         {
             loseTimer += Time.deltaTime;

@@ -2305,6 +2305,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4990929643846371432, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4990929643846371432, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 13.0078125
+      objectReference: {fileID: 0}
     - target: {fileID: 4298148357461200215, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: Player
@@ -2313,7 +2323,22 @@ PrefabInstance:
     - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: JumpForce
-      value: 9
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: playerHp
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: deathzone
+      value: -6.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+        type: 3}
+      propertyPath: Spwan.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
@@ -4732,10 +4757,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8037232603001120104, guid: 978b836dc3fca447891a3a0e67954d07, type: 3}
-  Player: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5, type: 3}
+  Player: {fileID: 1545296678}
   heart1: {fileID: 1138167380}
   heart2: {fileID: 1495198038}
   heart3: {fileID: 1608838347}
+  loseTimer: 0
 --- !u!4 &1281389739
 Transform:
   m_ObjectHideFlags: 0
@@ -6075,7 +6101,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.9505587
+  orthographic size: 8.013953
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
