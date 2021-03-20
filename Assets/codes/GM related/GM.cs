@@ -17,6 +17,8 @@ public class GM : MonoBehaviour
     public GameObject heart3;
 
     public float loseTimer;
+    public int pieceCount; //counts how many pieces are attached to the statue
+
 
     // Start is called before the first frame update
     void Awake()
@@ -31,20 +33,8 @@ public class GM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 2)
-        {
-            Destroy(heart1);
-        }
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 1)
-        {
-            Destroy(heart2);
-        }
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
-        {
-            Destroy(heart3);
-        }
 
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
+        if (Player.GetComponent<PlayerMovementScript>().playerHp <= 0)
         {
             loseTimer += Time.deltaTime;
             if (loseTimer >= 2f)
@@ -52,6 +42,15 @@ public class GM : MonoBehaviour
                 SceneManager.LoadScene("HandGameOverScreen");
             }
         }
+
+        if (pieceCount == 6)
+        {
+            //This will manage what events occur upon victory.
+
+            Time.timeScale = 0;
+        }
+
+       
     }
     void spwaner()
     {

@@ -10,11 +10,13 @@ public class backtostatue : MonoBehaviour
     public GameObject Graper;
     public GameObject pieces;
     public Vector3 spawnPos;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         Graper = GameObject.Find("Grap area");
+        gameManager = GameObject.Find("GM");
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class backtostatue : MonoBehaviour
             
             Graper.GetComponent<GrabController>().havepiece = false;
             pieces.GetComponent<SpriteRenderer>().enabled = true;
+            gameManager.GetComponent<GM>().pieceCount += 1;
             Destroy(gameObject);
             /*
             gameObject.transform.position = postion;

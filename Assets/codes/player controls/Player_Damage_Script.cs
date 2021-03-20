@@ -18,6 +18,7 @@ public class Player_Damage_Script : MonoBehaviour
     {
         if (gethit)
         {
+            Debug.Log("Player took a hit");
             GetComponent<PolygonCollider2D>().enabled = false;
             damagetimer += Time.deltaTime;
         }

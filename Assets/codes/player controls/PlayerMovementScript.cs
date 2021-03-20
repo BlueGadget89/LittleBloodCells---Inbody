@@ -18,12 +18,11 @@ public class PlayerMovementScript : MonoBehaviour
     public GameObject outcome;
     public float loseTimer;
 
-
     // Start is called before the first frame update
     void Start()
     {
         gameObject.GetComponent<Transform>().position = Spwan;
-        playerHp = 3; 
+        playerHp = 3;
     }
 
     // Update is called once per frame
@@ -54,14 +53,13 @@ public class PlayerMovementScript : MonoBehaviour
         }
         else if (gameover == true)
         {
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
         }
         if (canjump == false)
         {
             GetComponent<Animator>().Play("Jump");
         }
         
-
     }
 
     void Jump()
