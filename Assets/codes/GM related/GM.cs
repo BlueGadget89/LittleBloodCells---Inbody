@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GM : MonoBehaviour
 {
     public GameObject page2;
+    public GameObject tutorialButtonController;
 
     public GameObject enemy;
     public GameObject Player;
@@ -16,7 +17,7 @@ public class GM : MonoBehaviour
     public GameObject heart2;
     public GameObject heart3;
 
-    public float loseTimer;
+    public float sceneChangeTimer; //Timer for changing to the win or lose screens
     public int pieceCount; //counts how many pieces are attached to the statue
 
 
@@ -26,6 +27,7 @@ public class GM : MonoBehaviour
     }
     void Start()
     {
+        //tutorialButtonController.SetActive = true;
         page2.SetActive(false);
         spwaner();
     }
@@ -36,8 +38,8 @@ public class GM : MonoBehaviour
 
         if (Player.GetComponent<PlayerMovementScript>().playerHp <= 0)
         {
-            loseTimer += Time.deltaTime;
-            if (loseTimer >= 2f)
+            sceneChangeTimer += Time.deltaTime;
+            if (sceneChangeTimer >= 2f)
             {
                 SceneManager.LoadScene("HandGameOverScreen");
             }
@@ -46,8 +48,11 @@ public class GM : MonoBehaviour
         if (pieceCount == 6)
         {
             //This will manage what events occur upon victory.
-
-            Time.timeScale = 0;
+            sceneChangeTimer += Time.deltaTime;
+            if (sceneChangeTimer >= 2f)
+            {
+                SceneManager.LoadScene("Win Screen");
+            }
         }
 
        
