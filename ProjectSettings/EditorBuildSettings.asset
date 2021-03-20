@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HandGameOverScreen.unity
     guid: 710a695601a8f422aaf56f71bdda217b
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: 87451d318c10e453d8549114cb5e6d7c
   m_configObjects: {}

@@ -18,6 +18,10 @@ public class PlayerMovementScript : MonoBehaviour
     public GameObject outcome;
     public float loseTimer;
 
+    public AudioClip walkingSFX;
+    public AudioClip jumpSFX;
+    public AudioClip landingSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +32,45 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         Vector3 playerPos = gameObject.GetComponent<Transform>().position;
+
+        //Plays the sound
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GetComponent<AudioSource>().clip = walkingSFX;
+            GetComponent<AudioSource>().PlayOneShot(walkingSFX);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GetComponent<AudioSource>().clip = walkingSFX;
+            GetComponent<AudioSource>().PlayOneShot(walkingSFX);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            GetComponent<AudioSource>().clip = walkingSFX;
+            GetComponent<AudioSource>().PlayOneShot(walkingSFX);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            GetComponent<AudioSource>().clip = walkingSFX;
+            GetComponent<AudioSource>().PlayOneShot(walkingSFX);
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            GetComponent<AudioSource>().Stop();
+        }
 
         if (gameover == false)
         {
@@ -69,11 +109,15 @@ public class PlayerMovementScript : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             canjump = false;
             GetComponent<Animator>().Play("Jump");
+            GetComponent<AudioSource>().clip = jumpSFX;
+            GetComponent<AudioSource>().PlayOneShot(jumpSFX);
         }
     }
    
     private void OnCollisionEnter2D(Collision2D collision) // triggers the jump to reset
     {
+        GetComponent<AudioSource>().clip = landingSFX;
+        GetComponent<AudioSource>().PlayOneShot(landingSFX);
         canjump = true;
         if (canjump == true)
         {
@@ -83,17 +127,19 @@ public class PlayerMovementScript : MonoBehaviour
     }
     void move()
     {
-        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moveing left and right
-        transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moveing part" aka where the value gets add
-        GetComponent<AudioSource>().Play(0);
+        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moving left and right
+        transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moving part" aka where the value gets added
+
         if (movementInput.x > 0) {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             GetComponent<Animator>().Play("PlayerMovement");
+            
         }
         else if (movementInput.x < 0)
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             GetComponent<Animator>().Play("PlayerMovement");
+            
         }
 
         if (movementInput.x == 0)
@@ -101,6 +147,7 @@ public class PlayerMovementScript : MonoBehaviour
             if (canjump == true)
             {
                 GetComponent<Animator>().Play("Idle");
+                GetComponent<AudioSource>().clip = walkingSFX;
             }
         }
 
