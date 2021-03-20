@@ -10,11 +10,13 @@ public class aiming : MonoBehaviour
     public float angle;
     public float adjestment;
     public GameObject Player;
+    public float timer;
+    public bool canshoot;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        canshoot = true;
         outcome = GameObject.Find("outcome");
     }
 
@@ -28,10 +30,28 @@ public class aiming : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg; // trig and the angle caclualtion
         transform.rotation = Quaternion.Euler(0, 0, angle + adjestment);
 
-       
+
 
         //shoting
-        if (Input.GetMouseButtonDown(0))
+        shoting();
+   
+        
+    }
+    void shoting() {
+        // timer to shoot
+        if (canshoot == false)
+        {
+            timer += Time.deltaTime;
+            if (timer >= .5f)
+            {
+                canshoot = true;
+                timer = 0;
+            }
+            
+        }
+        //shooting part
+
+        if (Input.GetMouseButtonDown(0)&& canshoot == true)
         {
 
             Vector3 outcomepos = outcome.GetComponent<Transform>().position;
@@ -46,9 +66,10 @@ public class aiming : MonoBehaviour
             {
                 Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             }
-
+            canshoot = false;
         }
+        
     }
-    
+
 }
  
