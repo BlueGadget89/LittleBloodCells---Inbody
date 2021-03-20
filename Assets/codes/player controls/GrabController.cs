@@ -8,6 +8,7 @@ public class GrabController : MonoBehaviour
     public GameObject GP; // Grap point
     public bool onpiece;
     public bool havepiece;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,21 +24,21 @@ public class GrabController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "pieces")
+        if (collision.gameObject.tag == "pieces")
         {
             onpiece = true;
         }
-        else
-        {
-            onpiece = false;
-        }
-        if (onpiece && Input.GetKey(KeyCode.Q))
-        {
-            Debug.Log("ontrigger");
-
-        }
+       
 
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+            onpiece = false;
+        
+        
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "pieces" &&!havepiece && onpiece && Input.GetKey(KeyCode.Q))
@@ -49,4 +50,5 @@ public class GrabController : MonoBehaviour
             havepiece = true; 
         }
     }
+    
 }

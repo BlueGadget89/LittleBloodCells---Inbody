@@ -85,7 +85,7 @@ public class PlayerMovementScript : MonoBehaviour
     {
         Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moveing left and right
         transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moveing part" aka where the value gets add
-
+        GetComponent<AudioSource>().Play(0);
         if (movementInput.x > 0) {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             GetComponent<Animator>().Play("PlayerMovement");
