@@ -8,6 +8,9 @@ public class GrabController : MonoBehaviour
     public GameObject GP; // Grap point
     public bool onpiece;
     public bool havepiece;
+
+    public AudioClip itemPickUpSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,11 @@ public class GrabController : MonoBehaviour
     void Update()
     {
      
-
+        if (havepiece == true)
+        {
+            GetComponent<AudioSource>().clip = itemPickUpSound;
+            GetComponent<AudioSource>().Play();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

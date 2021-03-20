@@ -20,6 +20,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     public AudioClip walkingSFX;
     public AudioClip jumpSFX;
+    public AudioClip landingSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,6 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         Vector3 playerPos = gameObject.GetComponent<Transform>().position;
 
         //Plays the sound
@@ -117,6 +116,8 @@ public class PlayerMovementScript : MonoBehaviour
    
     private void OnCollisionEnter2D(Collision2D collision) // triggers the jump to reset
     {
+        GetComponent<AudioSource>().clip = landingSFX;
+        GetComponent<AudioSource>().PlayOneShot(landingSFX);
         canjump = true;
         if (canjump == true)
         {
