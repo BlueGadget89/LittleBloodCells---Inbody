@@ -7,6 +7,9 @@ public class Player_Damage_Script : MonoBehaviour
     public GameObject player;
     public float damagetimer;
     public bool gethit;
+
+    public AudioClip playerDamaged;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +40,9 @@ public class Player_Damage_Script : MonoBehaviour
             {
                 player.GetComponent<PlayerMovementScript>().playerHp -= 1;
                 gethit = true;
+                GetComponent<AudioSource>().clip = playerDamaged;
+                GetComponent<AudioSource>().PlayOneShot(playerDamaged);
             }
-        }
-            
+        }   
     }
-    
 }
