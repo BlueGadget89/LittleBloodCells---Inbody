@@ -131,15 +131,17 @@ public class PlayerMovementScript : MonoBehaviour
         transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moving part" aka where the value gets added
 
         if (movementInput.x > 0) {
-            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            //gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             GetComponent<Animator>().Play("PlayerMovement");
+            GetComponent<SpriteRenderer>().flipX = false;
             
         }
         else if (movementInput.x < 0)
         {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             GetComponent<Animator>().Play("PlayerMovement");
-            
+            GetComponent<SpriteRenderer>().flipX = true;
+
         }
 
         if (movementInput.x == 0)

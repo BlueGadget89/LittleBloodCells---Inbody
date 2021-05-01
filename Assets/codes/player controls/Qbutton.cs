@@ -25,5 +25,6 @@ public class Qbutton : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
+        
     }
 }
