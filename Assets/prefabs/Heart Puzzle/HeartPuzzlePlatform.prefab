@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  qButton: {fileID: 0}
   isInteracting: 0
   heartPiece1: {fileID: 0}
   heartPiece2: {fileID: 0}
@@ -105,6 +106,8 @@ MonoBehaviour:
   heartPiece6: {fileID: 0}
   pieceSelected: 1
   missingPieceAdded: 0
+  piecesComplete: 0
+  isOnPlatformReady: 0
 --- !u!60 &7759327766296745136
 PolygonCollider2D:
   m_ObjectHideFlags: 0

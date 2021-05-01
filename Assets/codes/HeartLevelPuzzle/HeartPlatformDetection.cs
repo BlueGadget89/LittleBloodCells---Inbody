@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeartPlatformDetection : MonoBehaviour
 {
     public GameObject Player;
+    //public GameObject qButton;
     public bool isInteracting;
     public GameObject heartPiece1;
     public GameObject heartPiece2;
@@ -15,6 +16,8 @@ public class HeartPlatformDetection : MonoBehaviour
     public int pieceSelected;
     public bool missingPieceAdded;
     public bool piecesComplete;
+    public bool isOnPlatformReady;
+    public GameObject GrabArea;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class HeartPlatformDetection : MonoBehaviour
         heartPiece6 = GameObject.Find("heart_1_6");
         heartPiece1.GetComponent<SpriteRenderer>().enabled = false;
         missingPieceAdded = false;
+        GrabArea = GameObject.Find("Grap area");
     }
 
     // Update is called once per frame
@@ -35,12 +39,16 @@ public class HeartPlatformDetection : MonoBehaviour
     {
         if (isInteracting == true)
         {
+            GrabArea.GetComponent<GrabController>().onpiece = false;
+
+            Player.GetComponent<PlayerMovementScript>().enabled = false;
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isInteracting = false;
                 Player.GetComponent<PlayerMovementScript>().moveSpeed = 5;
                 Player.GetComponent<PlayerMovementScript>().JumpForce = 9;
-                //Player.GetComponent<PlayerMovementScript>().enabled = true;
+                Player.GetComponent<PlayerMovementScript>().enabled = true;
             }
             //The Following is going to be all code for moving the pieces, lots of copy pasting
             if (pieceSelected >= 7)
@@ -156,6 +164,9 @@ public class HeartPlatformDetection : MonoBehaviour
             Debug.Log("Player is on platform");
             if (missingPieceAdded == true)
             {
+                isOnPlatformReady = true;
+                //qButton.GetComponent<SpriteRenderer>().enabled = true;
+                GrabArea.GetComponent<GrabController>().onpiece = true;
                 if (Input.GetKeyUp(KeyCode.Q))
                 {
                     isInteracting = true;
@@ -165,6 +176,16 @@ public class HeartPlatformDetection : MonoBehaviour
                     //Player.GetComponent<PlayerMovementScript>().enabled = false;
                 }
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == ("player"))
+        {
+            isOnPlatformReady = false;
+            //qButton.GetComponent<SpriteRenderer>().enabled = false;
+            GrabArea.GetComponent<GrabController>().onpiece = false;
         }
     }
 }
