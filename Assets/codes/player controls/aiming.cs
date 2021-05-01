@@ -51,13 +51,14 @@ public class aiming : MonoBehaviour
         }
         //shooting part
 
-        if (Input.GetMouseButtonDown(0)&& canshoot == true)
+        if (Input.GetMouseButtonDown(0) && canshoot == true)
         {
 
             Vector3 outcomepos = outcome.GetComponent<Transform>().position;
 
             Instantiate(bullet, outcomepos, transform.rotation);
-
+            
+           
             if (mousePos.x - Player.GetComponent<Transform>().rotation.x > 0)
             {
                 Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
@@ -66,6 +67,8 @@ public class aiming : MonoBehaviour
             {
                 Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             }
+           
+            
             canshoot = false;
         }
         

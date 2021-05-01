@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovementScript : MonoBehaviour
 {
 
-    public bool gameover = false; 
+    public bool gameover = false;
     //movement things
     public float moveSpeed = 5f;
     public float JumpForce = 10f;
@@ -74,9 +74,9 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (gameover == false)
         {
-            if(playerHp <= 0)
+            if (playerHp <= 0)
             {
-                gameover = true; 
+                gameover = true;
             }
             if (gameObject.transform.position.y < deathzone)//falling 
             {
@@ -88,8 +88,8 @@ public class PlayerMovementScript : MonoBehaviour
                 Jump();
             }
             move();
-          
-            
+
+
         }
         else if (gameover == true)
         {
@@ -99,12 +99,12 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<Animator>().Play("Jump");
         }
-        
+
     }
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.W))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             canjump = false;
@@ -133,14 +133,12 @@ public class PlayerMovementScript : MonoBehaviour
         if (movementInput.x > 0) {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             GetComponent<Animator>().Play("PlayerMovement");
-            //GetComponent<SpriteRenderer>().flipX = false;
             
         }
         else if (movementInput.x < 0)
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             GetComponent<Animator>().Play("PlayerMovement");
-            //GetComponent<SpriteRenderer>().flipX = true;
 
         }
 

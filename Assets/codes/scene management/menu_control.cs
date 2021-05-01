@@ -7,7 +7,7 @@ public class menu_control : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Hand_Level");
+        SceneManager.LoadScene("LevelSelection");
     }
     public void OuitGame()
     {
