@@ -6,18 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenuScene.unity
+    path: Assets/Scenes/menus/StartMenuScene.unity
     guid: 0a179860b3584af4eaef27bb63978891
   - enabled: 1
-    path: Assets/Scenes/Heart_Level.unity
+    path: Assets/Scenes/heart level/Heart_Level.unity
     guid: 46321c8d549cfaf4bb38b9bfb1b850e4
   - enabled: 1
-    path: Assets/Scenes/Hand_Level.unity
+    path: Assets/Scenes/hand levels/Hand_Level.unity
     guid: a7f8aafbcdc684f5d856d3283aa84573
   - enabled: 1
-    path: Assets/Scenes/HandGameOverScreen.unity
+    path: Assets/Scenes/hand levels/HandGameOverScreen.unity
     guid: 710a695601a8f422aaf56f71bdda217b
   - enabled: 1
-    path: Assets/Scenes/Win Screen.unity
+    path: Assets/Scenes/menus/Win Screen.unity
     guid: 87451d318c10e453d8549114cb5e6d7c
+  - enabled: 1
+    path: Assets/Scenes/menus/LevelSelection.unity
+    guid: 9fe7c103bb33b404caf18fb9b350f0d1
   m_configObjects: {}
