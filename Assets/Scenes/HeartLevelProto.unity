@@ -566,7 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7501a0a2dedb84a279782ab2b3ea7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeartPuzzlePlatform: {fileID: 0}
 --- !u!1 &2088538101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1518104704679385698, guid: 88de1106ffa414b2a957018b08b4b9ac,
