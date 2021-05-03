@@ -125,6 +125,12 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        canjump = false;
+    }
+
     void move()
     {
         Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moving left and right
@@ -132,13 +138,19 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (movementInput.x > 0) {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            GetComponent<Animator>().Play("PlayerMovement");
-            
+            if (canjump == true)
+            {
+                GetComponent<Animator>().Play("PlayerMovement");
+            }
+
         }
         else if (movementInput.x < 0)
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            GetComponent<Animator>().Play("PlayerMovement");
+            if (canjump == true)
+            {
+                GetComponent<Animator>().Play("PlayerMovement");
+            }
 
         }
 
