@@ -10,12 +10,14 @@ public class enemyM : MonoBehaviour
     public float speed;
     //Dictate which direction the entity must move once it reaches the edge of the platform
     private bool movingRight = true;
+    public GameObject gameManager;
 
     public Transform groundDetection;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GM");
     }
 
     // Update is called once per frame
@@ -57,7 +59,7 @@ public class enemyM : MonoBehaviour
             Destroy(gameObject.GetComponent<Rigidbody2D>());
             Destroy(gameObject.GetComponent<CircleCollider2D>());
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-
+            gameManager.GetComponent<GM>().enemiesKilled += 1;
         }
 
     }

@@ -19,6 +19,7 @@ public class GM : MonoBehaviour
 
     public float sceneChangeTimer; //Timer for changing to the win or lose screens
     public int pieceCount; //counts how many pieces are attached to the statue
+    public int enemiesKilled; //counts how many enemies have been defeated
 
 
     // Start is called before the first frame update
@@ -47,11 +48,14 @@ public class GM : MonoBehaviour
 
         if (pieceCount == 6)
         {
-            //This will manage what events occur upon victory.
-            sceneChangeTimer += Time.deltaTime;
-            if (sceneChangeTimer >= 2f)
+            if (enemiesKilled >= 6)
             {
-                SceneManager.LoadScene("Win Screen");
+                //This will manage what events occur upon victory.
+                sceneChangeTimer += Time.deltaTime;
+                if (sceneChangeTimer >= 2f)
+                {
+                    SceneManager.LoadScene("Win Screen");
+                }
             }
         }
 
