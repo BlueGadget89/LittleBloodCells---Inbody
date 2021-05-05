@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -22,10 +23,18 @@ public class PlayerMovementScript : MonoBehaviour
     public AudioClip jumpSFX;
     public AudioClip landingSFX;
 
+    public string sceneName;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Transform>().position = Spwan;
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        if (sceneName == "Hand_Level")
+        {
+            gameObject.GetComponent<Transform>().position = Spwan;
+        }
         playerHp = 3;
     }
 
