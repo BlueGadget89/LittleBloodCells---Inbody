@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Heart_GM : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Heart_GM : MonoBehaviour
     public GameObject platform2;
     public bool platform1complete;
     public bool platform2complete;
+
+    public int enemiesKilled;
+    public float totalEnemies;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +31,17 @@ public class Heart_GM : MonoBehaviour
         {
             platform2complete = true;
         }
+
+        if (platform1complete == true)
+        {
+            if (platform2complete == true)
+            {
+                if (enemiesKilled == totalEnemies)
+                {
+                    Debug.Log("Heart Level Complete");
+                }
+            }
+        }
+
     }
 }
