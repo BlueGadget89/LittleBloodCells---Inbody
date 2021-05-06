@@ -21,6 +21,7 @@ public class HeartPlatformDetection2 : MonoBehaviour
     public GameObject heartIndicator;
     public GameObject playerGun;
     public GameObject gameManager;
+    public Camera mainCam, platformCam;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,9 @@ public class HeartPlatformDetection2 : MonoBehaviour
             Player.GetComponent<PlayerMovementScript>().enabled = false;
             playerGun.GetComponent<aiming>().enabled = false;
 
+            mainCam.GetComponent<Camera>().enabled = false;
+            platformCam.GetComponent<Camera>().enabled = true;
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isInteracting = false;
@@ -67,6 +71,16 @@ public class HeartPlatformDetection2 : MonoBehaviour
                 Player.GetComponent<PlayerMovementScript>().enabled = true;
                 heartIndicator.GetComponent<SpriteRenderer>().enabled = false;
                 playerGun.GetComponent<aiming>().enabled = true;
+                mainCam.GetComponent<Camera>().enabled = true;
+                platformCam.GetComponent<Camera>().enabled = false;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GetComponent<AudioSource>().Play();
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                GetComponent<AudioSource>().Play();
             }
             //The Following is going to be all code for moving the pieces, lots of copy pasting
             if (pieceSelected >= 7)

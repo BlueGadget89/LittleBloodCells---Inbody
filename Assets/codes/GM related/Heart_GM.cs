@@ -13,11 +13,16 @@ public class Heart_GM : MonoBehaviour
     public int enemiesKilled;
     public float totalEnemies;
 
+    public Camera mainCam, platform1Cam, platform2Cam;
+
     // Start is called before the first frame update
     void Start()
     {
         platform1 = GameObject.Find("HeartPuzzlePlatform");
         platform2 = GameObject.Find("HeartPuzzlePlatform2");
+        mainCam.GetComponent<Camera>().enabled = true;
+        platform1Cam.GetComponent<Camera>().enabled = false;
+        platform2Cam.GetComponent<Camera>().enabled = false;
     }
 
     // Update is called once per frame
