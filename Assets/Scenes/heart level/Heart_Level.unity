@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30073578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.109807, y: 4.422556, z: 5610.3867}
+  m_LocalPosition: {x: 14.109807, y: 4.422556, z: 5608.61}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 271480479}
@@ -2617,7 +2617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &983233793
 Transform:
   m_ObjectHideFlags: 0
@@ -2644,7 +2644,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 53169998a3aff44b1b4900520914e287, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2735,7 +2735,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983233792}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbc1ccd4c586645fe9e4feed6a1f15a0, type: 3}
   m_Name: 
@@ -2752,6 +2752,18 @@ MonoBehaviour:
   heartPiece10: {fileID: 0}
   heartPiece11: {fileID: 0}
   heartPiece12: {fileID: 0}
+  heart1Complete: 0
+  heart2Complete: 0
+  heart3Complete: 0
+  heart4Complete: 0
+  heart5Complete: 0
+  heart6Complete: 0
+  heart7Complete: 0
+  heart8Complete: 0
+  heart9Complete: 0
+  heart10Complete: 0
+  heart11Complete: 0
+  heart12Complete: 0
   noise: {fileID: 8300000, guid: 53169998a3aff44b1b4900520914e287, type: 3}
 --- !u!1001 &1011341937
 PrefabInstance:
