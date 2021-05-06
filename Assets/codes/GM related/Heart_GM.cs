@@ -15,6 +15,8 @@ public class Heart_GM : MonoBehaviour
 
     public Camera mainCam, platform1Cam, platform2Cam;
 
+    public float winTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +46,13 @@ public class Heart_GM : MonoBehaviour
                 if (enemiesKilled == totalEnemies)
                 {
                     Debug.Log("Heart Level Complete");
+                    winTimer += Time.deltaTime;
                 }
             }
+        }
+        if (winTimer >= 3)
+        {
+            SceneManager.LoadScene("Heart_Victory");
         }
 
     }
