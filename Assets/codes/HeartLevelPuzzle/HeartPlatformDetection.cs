@@ -23,6 +23,11 @@ public class HeartPlatformDetection : MonoBehaviour
     public GameObject gameManager;
     public Camera mainCam, platformCam;
 
+    public GameObject health1;
+    public GameObject health2;
+    public GameObject health3;
+    public GameObject restartButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +67,11 @@ public class HeartPlatformDetection : MonoBehaviour
             mainCam.GetComponent<Camera>().enabled = false;
             platformCam.GetComponent<Camera>().enabled = true;
 
+            health1.GetComponent<SpriteRenderer>().enabled = false;
+            health2.GetComponent<SpriteRenderer>().enabled = false;
+            health3.GetComponent<SpriteRenderer>().enabled = false;
+            restartButton.GetComponent<SpriteRenderer>().enabled = false;
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isInteracting = false;
@@ -72,6 +82,11 @@ public class HeartPlatformDetection : MonoBehaviour
                 playerGun.GetComponent<aiming>().enabled = true;
                 mainCam.GetComponent<Camera>().enabled = true;
                 platformCam.GetComponent<Camera>().enabled = false;
+
+                health1.GetComponent<SpriteRenderer>().enabled = true;
+                health2.GetComponent<SpriteRenderer>().enabled = true;
+                health3.GetComponent<SpriteRenderer>().enabled = true;
+                restartButton.GetComponent<SpriteRenderer>().enabled = true;
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {

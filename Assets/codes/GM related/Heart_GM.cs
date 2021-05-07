@@ -10,12 +10,14 @@ public class Heart_GM : MonoBehaviour
     public bool platform1complete;
     public bool platform2complete;
 
+    public GameObject Player;
     public int enemiesKilled;
     public float totalEnemies;
 
     public Camera mainCam, platform1Cam, platform2Cam;
 
     public float winTimer;
+    public float loseTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,16 @@ public class Heart_GM : MonoBehaviour
         if (winTimer >= 3)
         {
             SceneManager.LoadScene("Heart_Victory");
+        }
+
+        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
+        {
+            Debug.Log("Heart Level Lost");
+            loseTimer += Time.deltaTime;
+        }
+        if (loseTimer >= 3)
+        {
+            SceneManager.LoadScene("HandGameOverScreen");
         }
 
     }
