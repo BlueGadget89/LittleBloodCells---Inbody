@@ -9,6 +9,8 @@ public class cutsceaneScript : MonoBehaviour
     public TextMeshProUGUI scenetext;
     public List<string> sencetext = new List<string>();
     public int x = 0;
+
+    public AnimationClip fadein;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class cutsceaneScript : MonoBehaviour
         scenetext.text = sencetext[x];
         if (Input.GetKeyDown(KeyCode.Space))
         {
+           // fadein("Fade in(textTMP)").time
             x++;
         }
     }
