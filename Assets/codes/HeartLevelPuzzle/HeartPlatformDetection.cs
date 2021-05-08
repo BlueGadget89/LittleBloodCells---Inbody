@@ -83,7 +83,10 @@ public class HeartPlatformDetection : MonoBehaviour
                 mainCam.GetComponent<Camera>().enabled = true;
                 platformCam.GetComponent<Camera>().enabled = false;
 
-                health1.GetComponent<SpriteRenderer>().enabled = true;
+                if (Player.GetComponent<PlayerMovementScript>().playerHp >= 3)
+                {
+                    health1.GetComponent<SpriteRenderer>().enabled = true;
+                }
                 health2.GetComponent<SpriteRenderer>().enabled = true;
                 health3.GetComponent<SpriteRenderer>().enabled = true;
                 restartButton.GetComponent<SpriteRenderer>().enabled = true;

@@ -9,6 +9,7 @@ public class menu_control : MonoBehaviour
     public GameObject handintro;
     public GameObject heartintro;
     public GameObject brainintro;
+    public GameObject levelSelectText;
 
 
    
@@ -23,12 +24,24 @@ public class menu_control : MonoBehaviour
     }
     public void Handlevel()
     {
-        handintro.SetActive(true); 
+        heartintro.SetActive(false);
+        handintro.SetActive(true);
+        levelSelectText.SetActive(false);
 
     }
     public void Handlevelbutton()
     {
 
         SceneManager.LoadScene("Hand_Level");
+    }
+    public void HeartLevel()
+    {
+        handintro.SetActive(false);
+        heartintro.SetActive(true);
+        levelSelectText.SetActive(false);
+    }
+    public void HeartLevelButton()
+    {
+        SceneManager.LoadScene("Heart_Level");
     }
 }

@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menus/IntroCutscene.unity
     guid: 9e72c359586e9446c934267ce5111ba9
+  - enabled: 1
+    path: Assets/Scenes/heart level/Heart_Victory.unity
+    guid: 4ef47e704ec09491781bb93848723601
+  - enabled: 1
+    path: Assets/Scenes/heart level/HeartGameOver.unity
+    guid: da1e08729e2924677bb7ff7a9d93f08c
   m_configObjects: {}
