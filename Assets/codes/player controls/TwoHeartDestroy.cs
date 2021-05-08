@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TwoHeartDestroy : MonoBehaviour
 {
@@ -11,11 +12,25 @@ public class TwoHeartDestroy : MonoBehaviour
     Color OriginalColor;
     SpriteRenderer ColorRenderer;
 
+    //public GameObject heartPlatform1;
+    //public GameObject heartPlatform2;
+    //public string sceneName;
+
     // Start is called before the first frame update
     void Start()
     {
         ColorRenderer = GetComponent<SpriteRenderer>();
         OriginalColor = ColorRenderer.material.color;
+
+        /*
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        if (sceneName == "Heart_Level")
+        {
+            heartPlatform1 = GameObject.Find("HeartPuzzlePlatform");
+            heartPlatform2 = GameObject.Find("HeartPuzzlePlatform2");
+        }
+        */
     }
 
     // Update is called once per frame
@@ -31,7 +46,20 @@ public class TwoHeartDestroy : MonoBehaviour
         }
         if (Player.GetComponent<PlayerMovementScript>().playerHp == 1)
         {
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
         }
+        /*
+        if (sceneName == "Heart_Level")
+        {
+            if (heartPlatform1.GetComponent<HeartPlatformDetection>().isInteracting == true || heartPlatform2.GetComponent<HeartPlatformDetection2>().isInteracting == true)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
+            if (heartPlatform2.GetComponent<HeartPlatformDetection2>().isInteracting == false || heartPlatform1.GetComponent<HeartPlatformDetection>().isInteracting == false)
+            {
+                GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
+        */
     }
 }

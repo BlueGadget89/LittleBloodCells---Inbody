@@ -28,12 +28,14 @@ public class HeartPieceDetectionScript2 : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        Debug.Log("q");
         if (GrabArea.GetComponent<GrabController>().havepiece == true)
         {
+            Debug.Log("h");
             if (collision.gameObject.tag == "player")
             {
                 Debug.Log("piece has arrived");
-                missingHeartPiece.GetComponent<missingHeartPieceScript>().isOnPuzzle = true;
+                missingHeartPiece.GetComponent<MissingHeartPieceScript2>().isOnPuzzle = true;
                 heartPlatform.GetComponent<HeartPlatformDetection2>().missingPieceAdded = true;
                 GrabArea.GetComponent<GrabController>().havepiece = false;
                 hiddenHeartPiece.GetComponent<hiddenHeartPieceScript>().onPuzzle = true;

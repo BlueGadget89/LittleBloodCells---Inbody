@@ -20,6 +20,14 @@ public class HeartPuzzlePieces : MonoBehaviour
     {
         //This changes the z rotation value under transform to whatever value angle is set to
         //by the HeartPlatformDetection script
+        if (angle > 360)
+        {
+            angle = 45;
+        }
+        if (angle < 0)
+        {
+            angle = 315;
+        }
         GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, angle);
     }
 }

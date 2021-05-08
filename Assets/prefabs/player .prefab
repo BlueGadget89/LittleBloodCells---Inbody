@@ -1032,6 +1032,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Graparea: {fileID: 4298148357859099058}
   player: {fileID: 4298148357543345734}
+  spriteRenderer: {fileID: 4344029571951981753}
+  handSprite: {fileID: 21300000, guid: 38240cf59770c405f9ea788c98e3451e, type: 3}
+  heartSprite: {fileID: 21300000, guid: af7dbc325d84f47b5822501662ec7d29, type: 3}
+  sceneName: 
 --- !u!50 &8800600175263938682
 Rigidbody2D:
   serializedVersion: 4
