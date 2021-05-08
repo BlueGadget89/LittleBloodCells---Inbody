@@ -11,6 +11,7 @@ public class Heart_GM : MonoBehaviour
     public bool platform2complete;
 
     public GameObject Player;
+    public GameObject playerWeapon;
     public int enemiesKilled;
     public float totalEnemies;
 
@@ -22,6 +23,9 @@ public class Heart_GM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerWeapon = GameObject.Find("weapon");
+        playerWeapon.GetComponent<aiming>().enabled = false;
+        Player.GetComponent<PlayerMovementScript>().enabled = false;
         platform1 = GameObject.Find("HeartPuzzlePlatform");
         platform2 = GameObject.Find("HeartPuzzlePlatform2");
         mainCam.GetComponent<Camera>().enabled = true;

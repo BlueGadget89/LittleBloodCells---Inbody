@@ -44,7 +44,7 @@ public class PlayerMovementScript : MonoBehaviour
         Vector3 playerPos = gameObject.GetComponent<Transform>().position;
 
         //Plays the sound
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && canjump == true)
         {
             GetComponent<AudioSource>().clip = walkingSFX;
             GetComponent<AudioSource>().PlayOneShot(walkingSFX);
@@ -53,7 +53,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<AudioSource>().Stop();
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && canjump == true)
         {
             GetComponent<AudioSource>().clip = walkingSFX;
             GetComponent<AudioSource>().PlayOneShot(walkingSFX);
@@ -62,7 +62,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<AudioSource>().Stop();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) && canjump == true)
         {
             GetComponent<AudioSource>().clip = walkingSFX;
             GetComponent<AudioSource>().PlayOneShot(walkingSFX);
@@ -71,7 +71,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<AudioSource>().Stop();
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && canjump == true)
         {
             GetComponent<AudioSource>().clip = walkingSFX;
             GetComponent<AudioSource>().PlayOneShot(walkingSFX);
@@ -108,6 +108,10 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<Animator>().Play("Jump");
         }
+        if (canjump == true)
+        {
+            GetComponent<AudioSource>().clip = walkingSFX;
+        }
 
     }
 
@@ -118,6 +122,7 @@ public class PlayerMovementScript : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             canjump = false;
             GetComponent<Animator>().Play("Jump");
+            GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().clip = jumpSFX;
             GetComponent<AudioSource>().PlayOneShot(jumpSFX);
         }
