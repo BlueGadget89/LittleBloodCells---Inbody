@@ -14,7 +14,7 @@ public class menu_control : MonoBehaviour
    
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("IntroCutscene");
     }
     public void OuitGame()
     {

@@ -22,7 +22,7 @@ public class QuitHandLevelLoseScreen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("Scene is reset");
-            SceneManager.LoadScene("StartMenuScene");
+            SceneManager.LoadScene("LevelSelection");
         }
     }
     private void OnMouseEnter()
