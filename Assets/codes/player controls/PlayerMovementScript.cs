@@ -140,10 +140,11 @@ public class PlayerMovementScript : MonoBehaviour
 
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    /*private void OnCollisionExit2D(Collision2D collision)
     {
         canjump = false;
     }
+    */
 
     void move()
     {
