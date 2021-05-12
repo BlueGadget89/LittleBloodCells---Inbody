@@ -41,6 +41,10 @@ public class cutsceaneScript : MonoBehaviour
     {
         
         scenetext.text = sceneTextString[x];
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            x++;
+        }
         /*
         if (scenetext.GetComponent<Animator>().playbackTime == 1.5)
         {
