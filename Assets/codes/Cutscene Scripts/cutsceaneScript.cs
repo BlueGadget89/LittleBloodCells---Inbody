@@ -39,55 +39,10 @@ public class cutsceaneScript : MonoBehaviour
     }
     void textchanger()
     {
-        
         scenetext.text = sceneTextString[x];
         if (Input.GetKeyDown(KeyCode.Space))
         {
             x++;
         }
-        /*
-        if (scenetext.GetComponent<Animator>().playbackTime == 1.5)
-        {
-            scenetext.GetComponent<Animator>().StopPlayback();
-            textIsStopped = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (textIsStopped == true)
-            {
-                scenetext.GetComponent<Animator>().StartPlayback();
-                textIsStopped = false;
-            }
-            //x++;
-        }
-        if (scenetext.GetComponent<Animator>().playbackTime == 3)
-        {
-            x++;
-            scenetext.GetComponent<Animator>().playbackTime = 0;
-        }
-        
-        if (scenetext.GetComponent<TextMeshProUGUI>().color.a == 255)
-        {
-            //scenetext.GetComponent<Animator>().StopPlayback();
-            
-            textIsStopped = true;
-            Debug.Log("Text is stopped");
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (textIsStopped == true)
-            {
-                scenetext.GetComponent<Animator>().StartPlayback();
-                textIsStopped = false;
-                Debug.Log("Text is resumed");
-            }
-        }
-        if (scenetext.GetComponent<TextMeshProUGUI>().color.a == 0)
-        {
-            //x++;
-            //scenetext.GetComponent<Animation>().Rewind();
-            Debug.Log("Text is reset");
-        }
-        */
     }
 }
