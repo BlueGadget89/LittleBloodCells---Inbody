@@ -6486,6 +6486,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2142813148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2971139735555462304, guid: 6d5df60bdfe644b0b98b7f65a3b0af37,
+    type: 3}
+  m_PrefabInstance: {fileID: 2971139735917870568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142813149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142813148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0333fa05c05644d17b3b9c85f148398f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2142813151}
+  handSprite: {fileID: 21300000, guid: c5a09366a12e94c1a8b4a8754169e8fb, type: 3}
+  heartSprite: {fileID: 21300000, guid: f9c7c8f47228049598d61bb0465cd64a, type: 3}
+  sceneName: 
+--- !u!212 &2142813151 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2971139735555462306, guid: 6d5df60bdfe644b0b98b7f65a3b0af37,
+    type: 3}
+  m_PrefabInstance: {fileID: 2971139735917870568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2971139735917870568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6553,7 +6581,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2971139735555462305, guid: 6d5df60bdfe644b0b98b7f65a3b0af37, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d5df60bdfe644b0b98b7f65a3b0af37, type: 3}
 --- !u!1001 &4843024780682823190
 PrefabInstance:

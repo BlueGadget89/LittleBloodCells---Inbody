@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneRestartScript : MonoBehaviour
+public class sceneRestartScript : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite handSprite;
