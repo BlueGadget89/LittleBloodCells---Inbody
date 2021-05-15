@@ -24,6 +24,12 @@ public class SceneFadeScript : MonoBehaviour
         {
             StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Image>()));
         }
+        if(running2 == false) {
+            gameObject.SetActive(false);
+            Debug.Log("working");
+        }
+
+
     }
 
     public IEnumerator FadeTextToFullAlpha(float t, Image i)
