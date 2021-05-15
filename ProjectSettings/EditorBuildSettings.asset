@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/menus/StartMenuScene.unity
     guid: 0a179860b3584af4eaef27bb63978891
   - enabled: 1
-    path: Assets/Scenes/heart level/Heart_Level.unity
-    guid: 46321c8d549cfaf4bb38b9bfb1b850e4
+    path: Assets/Scenes/menus/IntroCutscene.unity
+    guid: 9e72c359586e9446c934267ce5111ba9
+  - enabled: 1
+    path: Assets/Scenes/menus/LevelSelection.unity
+    guid: 9fe7c103bb33b404caf18fb9b350f0d1
   - enabled: 1
     path: Assets/Scenes/hand levels/Hand_Level.unity
     guid: a7f8aafbcdc684f5d856d3283aa84573
@@ -21,15 +24,18 @@ EditorBuildSettings:
     path: Assets/Scenes/menus/Win Screen.unity
     guid: 87451d318c10e453d8549114cb5e6d7c
   - enabled: 1
-    path: Assets/Scenes/menus/LevelSelection.unity
-    guid: 9fe7c103bb33b404caf18fb9b350f0d1
+    path: Assets/Scenes/heart level/Heart_Level.unity
+    guid: 46321c8d549cfaf4bb38b9bfb1b850e4
   - enabled: 1
-    path: Assets/Scenes/menus/IntroCutscene.unity
-    guid: 9e72c359586e9446c934267ce5111ba9
+    path: Assets/Scenes/heart level/HeartGameOver.unity
+    guid: da1e08729e2924677bb7ff7a9d93f08c
   - enabled: 1
     path: Assets/Scenes/heart level/Heart_Victory.unity
     guid: 4ef47e704ec09491781bb93848723601
   - enabled: 1
-    path: Assets/Scenes/heart level/HeartGameOver.unity
-    guid: da1e08729e2924677bb7ff7a9d93f08c
+    path: Assets/Scenes/menus/OutroCutscene.unity
+    guid: 995b83a92c1004bc388a21b3759fd81e
+  - enabled: 1
+    path: Assets/Scenes/menus/OutroCredits.unity
+    guid: 23bfeb351a380429e8e488921a1fe224
   m_configObjects: {}

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class IntroTextOpacityScript : MonoBehaviour
+public class OutroText : MonoBehaviour
 {
     public bool running1;
     public bool running2;
@@ -18,12 +18,16 @@ public class IntroTextOpacityScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneTextString.Add("Welcome, young one.");
-        sceneTextString.Add("A dark fate has befallen the kingdom which I rule.");
-        sceneTextString.Add("The sickness haunts my kingdom.");
-        sceneTextString.Add("The sickness haunts my body.");
-        sceneTextString.Add("Your mission is to cure me of my sickness.");
-        sceneTextString.Add("Your journey begins now...");
+        sceneTextString.Add("Well done, young one.");
+        sceneTextString.Add("Your courage in the face of malice has saved the kingdom.");
+        sceneTextString.Add("My spirit has been reignited.");
+        sceneTextString.Add("Myself, along with the kingdom, has been cured from this sickness.");
+        sceneTextString.Add("Kingdoms will always be vulnerable.");
+        sceneTextString.Add("Walls will crumble and walls will be built");
+        sceneTextString.Add("But may your spirit never dwindle.");
+        sceneTextString.Add("Keep your hands close to your heart and your mind.");
+        sceneTextString.Add("Go on, and live young one.");
+        sceneTextString.Add("Go on, and live...");
         textIsStopped = false;
         GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
         StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<TextMeshProUGUI>()));
@@ -32,7 +36,7 @@ public class IntroTextOpacityScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (x > 5)
+        if (x > 9)
         {
             SceneManager.LoadScene("LevelSelection");
         }

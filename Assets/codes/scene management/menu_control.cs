@@ -10,7 +10,7 @@ public class menu_control : MonoBehaviour
     public GameObject heartintro;
     public GameObject brainintro;
     public GameObject levelSelectText;
-    public GameObject heartSilhouette, handSilhouette;
+    public GameObject heartSilhouette, handSilhouette, heartLocked;
     public GameObject sceneTransition;
 
     public void PlayGame()
@@ -29,7 +29,7 @@ public class menu_control : MonoBehaviour
         levelSelectText.SetActive(false);
         heartSilhouette.SetActive(false);
         handSilhouette.SetActive(false);
-
+        heartLocked.SetActive(false);
     }
     public void Handlevelbutton()
     {
@@ -42,6 +42,7 @@ public class menu_control : MonoBehaviour
         levelSelectText.SetActive(false);
         heartSilhouette.SetActive(false);
         handSilhouette.SetActive(false);
+        heartLocked.SetActive(false);
     }
     public void HeartLevelButton()
     {

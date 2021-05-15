@@ -8,7 +8,7 @@ public class ThreeHeartDestroy : MonoBehaviour
     public GameObject Player;
     public GameObject playerDamageDetector;
     //Stuff for damage indicator
-    Color damageColor = Color.cyan;
+    Color damageColor = Color.red;
     Color OriginalColor;
     SpriteRenderer ColorRenderer;
     //public string sceneName;

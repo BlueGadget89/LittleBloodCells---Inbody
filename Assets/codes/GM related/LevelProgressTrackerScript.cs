@@ -26,12 +26,18 @@ public class LevelProgressTrackerScript : MonoBehaviour
         if (sceneName == "LevelSelection")
         {
             GameObject heartButton = GameObject.Find("heart");
+            GameObject heartSilhouette = GameObject.Find("Heart Silhouette");
+            GameObject heartLocked = GameObject.Find("HeartLocked");
             if (handLevelComplete == false)
             {
+                heartLocked.SetActive(true);
+                heartSilhouette.SetActive(false);
                 heartButton.SetActive(false);
             }
             if (handLevelComplete == true)
             {
+                heartSilhouette.SetActive(true);
+                heartLocked.SetActive(false);
                 heartButton.SetActive(true);
             }
         }
