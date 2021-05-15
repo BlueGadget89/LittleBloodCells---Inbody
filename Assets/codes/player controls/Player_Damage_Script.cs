@@ -10,7 +10,7 @@ public class Player_Damage_Script : MonoBehaviour
 
     public AudioClip playerDamaged;
 
-    public Color damageColor = Color.cyan;
+    public Color damageColor = Color.red;
     public Color originalColor;
     public SpriteRenderer colorRenderer;
 
