@@ -28,7 +28,7 @@ public class SceneFadeScript : MonoBehaviour
             gameObject.SetActive(false);
             Debug.Log("working");
         }
-
+        
 
     }
 
