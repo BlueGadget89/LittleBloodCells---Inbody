@@ -38,7 +38,7 @@ public class OutroText : MonoBehaviour
     {
         if (x > 9)
         {
-            SceneManager.LoadScene("LevelSelection");
+            SceneManager.LoadScene("OutroCredits");
         }
         textchanger();
         if (Input.GetKeyDown(KeyCode.Space))
