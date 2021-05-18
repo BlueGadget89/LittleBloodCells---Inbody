@@ -14,30 +14,32 @@ public class CreditsTextScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (sceneTimer < 26.4)
+        if (sceneTimer < 27)
         {
             sceneTimer += Time.deltaTime;
-            GetComponent<Transform>().position += new Vector3(0, 4, 0);
+            //GetComponent<Transform>().position += new Vector3(0, 4, 0);
         }
-        if (sceneTimer >= 26.4)
+        if (sceneTimer >= 27)
         {
             sceneChangeTimer += Time.deltaTime;
         }
-        if (sceneChangeTimer >= 3)
+        if (sceneChangeTimer >= 5)
         {
             sceneChanging = true;
         }
         if (sceneChanging == true)
         {
+            fading.GetComponent<SceneFadeScript>().running2 = true;
+            fading.SetActive(true);
             fading.GetComponent<SceneFadeScript>().isTransitioning = true;
         }
-        if (sceneChangeTimer >= 6)
+        if (sceneChangeTimer >= 8)
         {
             SceneManager.LoadScene("LevelSelection");
         }
