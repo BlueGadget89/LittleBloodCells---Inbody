@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-
+    
     public bool gameover = false;
     //movement things
     public float moveSpeed = 5f;
@@ -14,6 +14,7 @@ public class PlayerMovementScript : MonoBehaviour
     //Hp and damgage
     public int playerHp;
     public float deathzone;
+    public GameObject hixbox;
     public Vector3 Spwan;// where player spwans
     //attack
     public GameObject outcome;
@@ -149,9 +150,11 @@ public class PlayerMovementScript : MonoBehaviour
     void move()
     {
         Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);// moving left and right
+
         transform.position += movementInput * Time.deltaTime * moveSpeed;// the "moving part" aka where the value gets added
 
-        if (movementInput.x > 0) {
+        if (movementInput.x > 0)
+        {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             if (canjump == true)
             {
@@ -177,8 +180,7 @@ public class PlayerMovementScript : MonoBehaviour
                 GetComponent<AudioSource>().clip = walkingSFX;
             }
         }
-
-
     }
+    
    
 }
