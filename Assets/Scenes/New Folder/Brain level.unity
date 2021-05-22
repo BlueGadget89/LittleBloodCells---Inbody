@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cdef30633e3454d84778bb5a13c727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTransform: {fileID: 0}
+  followTransform: {fileID: 504717688}
   mapBounds: {fileID: 0}
   xMin: -13.22
   xMax: 21.46
@@ -562,6 +562,12 @@ BoxCollider2D:
 --- !u!1 &504717681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 508550460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &504717688 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
     type: 3}
   m_PrefabInstance: {fileID: 508550460}
   m_PrefabAsset: {fileID: 0}
@@ -877,12 +883,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playerDamageDetector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516807719}
     - target: {fileID: 7355035158617612730, guid: e5b1f0afc8e8b4337a02e5606dcbce4c,
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 504717681}
     - target: {fileID: 7355035158617612731, guid: e5b1f0afc8e8b4337a02e5606dcbce4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1421,12 +1427,12 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 504717681}
     - target: {fileID: 4340433478506371301, guid: 9723f63a6a504483dbfa1cc687091ef1,
         type: 3}
       propertyPath: playerDamageDetector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516807719}
     - target: {fileID: 4340433478506371302, guid: 9723f63a6a504483dbfa1cc687091ef1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2108,12 +2114,12 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 504717681}
     - target: {fileID: 6090867224081579496, guid: a8901a3c9738842c19a86faf5b4f2462,
         type: 3}
       propertyPath: playerDamageDetector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1516807719}
     - target: {fileID: 6090867224081579497, guid: a8901a3c9738842c19a86faf5b4f2462,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,6 +12,10 @@ public class OutroText : MonoBehaviour
     public bool fading;
     public bool textIsStopped;
 
+    public GameObject fadingObject;
+    public float sceneChangeTimer;
+    public bool sceneChanging;
+
     public List<string> sceneTextString = new List<string>();
     public int x = 0;
 
@@ -36,9 +40,9 @@ public class OutroText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (x > 9)
+        if (x == 9)
         {
-            SceneManager.LoadScene("LevelSelection");
+            sceneChanging = true;
         }
         textchanger();
         if (Input.GetKeyDown(KeyCode.Space))
@@ -57,6 +61,17 @@ public class OutroText : MonoBehaviour
                 StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<TextMeshProUGUI>()));
                 fading = false;
             }
+        }
+        if (sceneChanging == true)
+        {
+            sceneChangeTimer += Time.deltaTime;
+            fadingObject.GetComponent<SceneFadeScript>().running2 = true;
+            fadingObject.SetActive(true);
+            fadingObject.GetComponent<SceneFadeScript>().isTransitioning = true;
+        }
+        if (sceneChangeTimer >= 2)
+        {
+            SceneManager.LoadScene("OutroCredits");
         }
     }
 

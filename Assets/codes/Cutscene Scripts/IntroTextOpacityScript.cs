@@ -25,7 +25,7 @@ public class IntroTextOpacityScript : MonoBehaviour
         sceneTextString.Add("Your mission is to cure me of my sickness.");
         sceneTextString.Add("Your journey begins now...");
         textIsStopped = false;
-        GetComponent<TextMeshProUGUI>().color = new Color(255, 255, 255, 0);
+        GetComponent<TextMeshProUGUI>().color = new Color(97, 65, 59, 0);
         StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<TextMeshProUGUI>()));
     }
 
@@ -66,11 +66,11 @@ public class IntroTextOpacityScript : MonoBehaviour
 
     public IEnumerator FadeTextToFullAlpha(float t, TextMeshProUGUI i)
     {
-        i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
+        i.color = new Color(97, 65, 59, 0);
         while (i.color.a < 1.0f)
         {
             running1 = true;
-            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
+            i.color = new Color(97, 65, 59, i.color.a + (Time.deltaTime / t));
             yield return null;
             running1 = false;
         }
@@ -78,11 +78,11 @@ public class IntroTextOpacityScript : MonoBehaviour
 
     public IEnumerator FadeTextToZeroAlpha(float t, TextMeshProUGUI i)
     {
-        i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
+        i.color = new Color(97, 65, 59, 1);
         while (i.color.a > 0.0f)
         {
             running2 = true;
-            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
+            i.color = new Color(97, 65, 59, i.color.a - (Time.deltaTime / t));
             yield return null;
             running2 = false;
         }

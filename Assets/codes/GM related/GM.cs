@@ -21,6 +21,8 @@ public class GM : MonoBehaviour
     public float sceneChangeTimer; //Timer for changing to the win or lose screens
     public int pieceCount; //counts how many pieces are attached to the statue
     public int enemiesKilled; //counts how many enemies have been defeated
+    public int oldPieceCount;
+    public AudioSource piecePickUpSource;
 
 
     // Start is called before the first frame update
@@ -66,7 +68,11 @@ public class GM : MonoBehaviour
                 }
             }
         }
-
+        if (pieceCount > oldPieceCount)
+        {
+            piecePickUpSource.Play();
+            oldPieceCount = pieceCount;
+        }
        
     }
     void spwaner(string SceneName)
