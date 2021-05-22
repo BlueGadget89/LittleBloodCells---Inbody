@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour
 {
+    public string sceneName;
     public GameObject page2;
     public GameObject tutorialButtonController;
 
@@ -25,12 +26,19 @@ public class GM : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
     }
     void Start()
     {
+
         //tutorialButtonController.SetActive = true;
         page2.SetActive(false);
-        spwaner();
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        //called
+        spwaner("Hand_Level");
+
+
     }
 
     // Update is called once per frame
@@ -61,26 +69,44 @@ public class GM : MonoBehaviour
 
        
     }
-    void spwaner()
+    void spwaner(string SceneName)
     {
-        // spwans pos for enemy
-        Vector3 Sp1 = new Vector3(-13.29f, 4.26f, 0);
-        Vector3 Sp2 = new Vector3(-12.23f, -3.0f, 0);
-        Vector3 Sp3 = new Vector3(-6.158f, -5.991f, 0);
-        Vector3 Sp4 = new Vector3(5.97f, -5.991f, 0);// needs to turn 180 on Z
-        Vector3 Sp5 = new Vector3(11.23f, -2.786f, 0);
-        Vector3 Sp6 = new Vector3(13.3f, 3.98f, 0);
+        List<Vector3> enemyspwan = new List<Vector3>();
+        
+        {
+            if (sceneName == "Hand_Level")
+            {
+                // spwans pos for enemy
+                enemyspwan.Add(new Vector3(-13.29f, 4.26f, 0));
+                enemyspwan.Add(new Vector3(-12.23f, -3.0f, 0));
+                enemyspwan.Add(new Vector3(-6.158f, -5.991f, 0));
+                enemyspwan.Add(new Vector3(5.97f, -5.991f, 0));// needs to turn 180 on Z
+                enemyspwan.Add(new Vector3(11.23f, -2.786f, 0));
+                enemyspwan.Add(new Vector3(13.3f, 3.98f, 0));
 
-        // spwaning enemys
-        Instantiate(enemy, Sp1, Quaternion.identity);
-        Instantiate(enemy, Sp2, Quaternion.identity);
-        Instantiate(enemy, Sp3, Quaternion.identity);
-        Instantiate(enemy, Sp4, Quaternion.identity);
-        Instantiate(enemy, Sp5, Quaternion.identity);
-        Instantiate(enemy, Sp6, Quaternion.identity);
+                for (int x = 0; x < enemyspwan.Count; x++)
+                {
+                    Instantiate(enemy, enemyspwan[x], Quaternion.identity);
+                }
+            }
 
+            else if (sceneName == "Heart_Level")
+            {
+                // spwans pos for enemy
+                enemyspwan.Add(new Vector3(-1.086519f, 14.19f, 0));
+                enemyspwan.Add(new Vector3(11.11f, 14.19f, 0));
+                enemyspwan.Add(new Vector3(13.48f, 3.21f, 0));
+                enemyspwan.Add(new Vector3(3.3f, 0.47f, 0));// needs to turn 180 on Z
+               
+                    for (int x = 0; x < enemyspwan.Count; x++)
+                    {
+                        Instantiate(enemy, enemyspwan[x], Quaternion.identity);
 
+                    }
+            }
+        }
     }
+    // use to show player HP
     void heart()
     {
         
