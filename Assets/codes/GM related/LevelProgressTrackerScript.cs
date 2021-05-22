@@ -42,7 +42,7 @@ public class LevelProgressTrackerScript : MonoBehaviour
             }
             if (heartLevelComplete == true && handLevelComplete == true)
             {
-
+                Debug.Log("Game done");
             }
         }
 
