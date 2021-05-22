@@ -40,6 +40,10 @@ public class LevelProgressTrackerScript : MonoBehaviour
                 heartLocked.SetActive(false);
                 heartButton.SetActive(true);
             }
+            if (heartLevelComplete == true && handLevelComplete == true)
+            {
+
+            }
         }
 
         if (sceneName == "Hand_Level")
