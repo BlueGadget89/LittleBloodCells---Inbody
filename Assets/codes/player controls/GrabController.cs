@@ -28,10 +28,8 @@ public class GrabController : MonoBehaviour
         {
             onpiece = true;
         }
-       
-
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
         
             onpiece = false;
@@ -50,5 +48,4 @@ public class GrabController : MonoBehaviour
             havepiece = true; 
         }
     }
-    
 }
