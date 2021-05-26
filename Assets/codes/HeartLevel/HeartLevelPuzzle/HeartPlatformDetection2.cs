@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartPlatformDetection : MonoBehaviour
+public class HeartPlatformDetection2 : MonoBehaviour
 {
     public GameObject Player;
     //public GameObject qButton;
     public bool isInteracting;
-    public GameObject heartPiece1;
-    public GameObject heartPiece2;
-    public GameObject heartPiece3;
-    public GameObject heartPiece4;
-    public GameObject heartPiece5;
-    public GameObject heartPiece6;
+    public GameObject heartPiece7;
+    public GameObject heartPiece8;
+    public GameObject heartPiece9;
+    public GameObject heartPiece10;
+    public GameObject heartPiece11;
+    public GameObject heartPiece12;
     public int pieceSelected;
     public bool missingPieceAdded;
     public bool piecesComplete;
@@ -32,16 +32,16 @@ public class HeartPlatformDetection : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("player ");
-        heartPiece1 = GameObject.Find("heart_1_1");
-        heartPiece2 = GameObject.Find("heart_1_2");
-        heartPiece3 = GameObject.Find("heart_1_3");
-        heartPiece4 = GameObject.Find("heart_1_4");
-        heartPiece5 = GameObject.Find("heart_1_5");
-        heartPiece6 = GameObject.Find("heart_1_6");
-        heartPiece1.GetComponent<SpriteRenderer>().enabled = false;
+        heartPiece7 = GameObject.Find("heart7");
+        heartPiece8 = GameObject.Find("heart8");
+        heartPiece9 = GameObject.Find("heart9");
+        heartPiece10 = GameObject.Find("heart10");
+        heartPiece11 = GameObject.Find("heart11");
+        heartPiece12 = GameObject.Find("heart12");
         missingPieceAdded = false;
         GrabArea = GameObject.Find("Grap area");
-        heartIndicator = GameObject.Find("HeartIndicator1");
+        heartIndicator = GameObject.Find("HeartIndicator2");
+        heartIndicator.GetComponent<SpriteRenderer>().enabled = false;
         playerGun = GameObject.Find("weapon");
         gameManager = GameObject.Find("GM");
     }
@@ -49,12 +49,13 @@ public class HeartPlatformDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (gameManager.GetComponent<Heart_GM>().platform1complete == true)
+       /* if (gameManager.GetComponent<Heart_GM>().platform2complete == true)
         {
             Player.GetComponent<PlayerMovementScript>().enabled = true;
             playerGun.GetComponent<aiming>().enabled = true;
-            GetComponent<HeartPlatformDetection>().enabled = false;
-        } */    
+            GetComponent<HeartPlatformDetection2>().enabled = false;
+        }
+        */
 
         if (isInteracting == true)
         {
@@ -83,10 +84,7 @@ public class HeartPlatformDetection : MonoBehaviour
                 mainCam.GetComponent<Camera>().enabled = true;
                 platformCam.GetComponent<Camera>().enabled = false;
 
-                if (Player.GetComponent<PlayerMovementScript>().playerHp >= 3)
-                {
-                    health1.GetComponent<SpriteRenderer>().enabled = true;
-                }
+                health1.GetComponent<SpriteRenderer>().enabled = true;
                 health2.GetComponent<SpriteRenderer>().enabled = true;
                 health3.GetComponent<SpriteRenderer>().enabled = true;
                 restartButton.GetComponent<SpriteRenderer>().enabled = true;
@@ -120,79 +118,79 @@ public class HeartPlatformDetection : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece1.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece7.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece1.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece7.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
             if (pieceSelected == 2)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece2.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece8.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece2.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece8.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
             if (pieceSelected == 3)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece3.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece9.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece3.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece9.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
             if (pieceSelected == 4)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece4.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece10.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece4.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece10.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
             if (pieceSelected == 5)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece5.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece11.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece5.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece11.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
             if (pieceSelected == 6)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    heartPiece6.GetComponent<HeartPuzzlePieces>().angle += 45;
+                    heartPiece12.GetComponent<HeartPuzzlePieces>().angle += 45;
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
-                    heartPiece6.GetComponent<HeartPuzzlePieces>().angle -= 45;
+                    heartPiece12.GetComponent<HeartPuzzlePieces>().angle -= 45;
                 }
             }
-            if (heartPiece1.GetComponent<HeartPuzzlePieces>().angle == 0 || heartPiece1.GetComponent<HeartPuzzlePieces>().angle == 360)
+            if (heartPiece7.GetComponent<HeartPuzzlePieces>().angle == 0 || heartPiece7.GetComponent<HeartPuzzlePieces>().angle == 360)
             {
-                if (heartPiece2.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece2.GetComponent<HeartPuzzlePieces>().angle == 0)
+                if (heartPiece8.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece8.GetComponent<HeartPuzzlePieces>().angle == 0)
                 {
-                    if (heartPiece3.GetComponent<HeartPuzzlePieces>().angle == 0 || heartPiece3.GetComponent<HeartPuzzlePieces>().angle == 360)
+                    if (heartPiece9.GetComponent<HeartPuzzlePieces>().angle == 0 || heartPiece9.GetComponent<HeartPuzzlePieces>().angle == 360)
                     {
-                        if (heartPiece4.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece4.GetComponent<HeartPuzzlePieces>().angle == 0)
+                        if (heartPiece10.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece10.GetComponent<HeartPuzzlePieces>().angle == 0)
                         {
-                            if (heartPiece5.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece5.GetComponent<HeartPuzzlePieces>().angle == 0)
+                            if (heartPiece11.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece11.GetComponent<HeartPuzzlePieces>().angle == 0)
                             {
-                                if (heartPiece6.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece6.GetComponent<HeartPuzzlePieces>().angle == 0)
+                                if (heartPiece12.GetComponent<HeartPuzzlePieces>().angle == 360 || heartPiece12.GetComponent<HeartPuzzlePieces>().angle == 0)
                                 {
                                     piecesComplete = true;
                                 }
@@ -200,6 +198,23 @@ public class HeartPlatformDetection : MonoBehaviour
                         }
                     }
                 }
+            }
+            if (piecesComplete == true)
+            {
+                isInteracting = false;
+                Player.GetComponent<PlayerMovementScript>().moveSpeed = 5;
+                Player.GetComponent<PlayerMovementScript>().JumpForce = 9;
+                Player.GetComponent<PlayerMovementScript>().enabled = true;
+                heartIndicator.GetComponent<SpriteRenderer>().enabled = false;
+                playerGun.GetComponent<aiming>().enabled = true;
+                mainCam.GetComponent<Camera>().enabled = true;
+                platformCam.GetComponent<Camera>().enabled = false;
+
+                health1.GetComponent<SpriteRenderer>().enabled = true;
+                health2.GetComponent<SpriteRenderer>().enabled = true;
+                health3.GetComponent<SpriteRenderer>().enabled = true;
+                restartButton.GetComponent<SpriteRenderer>().enabled = true;
+                GetComponent<BoxCollider2D>().enabled = false;
             }
         }
 
@@ -219,7 +234,7 @@ public class HeartPlatformDetection : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.Q))
                 {
                     isInteracting = true;
-                    heartPiece1.GetComponent<SpriteRenderer>().enabled = true;
+                    heartPiece7.GetComponent<SpriteRenderer>().enabled = true;
                     Player.GetComponent<PlayerMovementScript>().moveSpeed = 0;
                     Player.GetComponent<PlayerMovementScript>().JumpForce = 0;
                     //Player.GetComponent<PlayerMovementScript>().enabled = false;
@@ -238,3 +253,4 @@ public class HeartPlatformDetection : MonoBehaviour
         }
     }
 }
+

@@ -26,6 +26,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     public string sceneName;
 
+    public bool holdingHeartPiece1, holdingHeartPiece2;
+
     // Start is called before the first frame update
     void Start()
     {

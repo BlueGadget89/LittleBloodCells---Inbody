@@ -2130,7 +2130,7 @@ PrefabInstance:
     - target: {fileID: 8366783749352151517, guid: 62e0c2015b8984b968d88eba817a0add,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e0c2015b8984b968d88eba817a0add, type: 3}
@@ -6412,6 +6412,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 633793239}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1539085548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539085550}
+  - component: {fileID: 1539085549}
+  m_Layer: 0
+  m_Name: StopPieceFalling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1539085549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539085548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c91ccbabae024a42a25b2c28d59bcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenPiece: {fileID: 1461491887}
+  pinkPiece: {fileID: 1508637808}
+  purplePiece: {fileID: 1280332150}
+  redPiece: {fileID: 1130306309}
+  yellowPiece: {fileID: 194449000}
+  bluePiece: {fileID: 1171796109}
+  greenStatue: {fileID: 742156093}
+  pinkStatue: {fileID: 343760298}
+  purpleStatue: {fileID: 1144439860}
+  redStatue: {fileID: 87309965}
+  yellowStatue: {fileID: 515626142}
+  blueStatue: {fileID: 340347746}
+  greenPos: {x: 0, y: 0, z: 0}
+  pinkPos: {x: 0, y: 0, z: 0}
+  purplePos: {x: 0, y: 0, z: 0}
+  redPos: {x: 0, y: 0, z: 0}
+  yellowPos: {x: 0, y: 0, z: 0}
+  bluePos: {x: 0, y: 0, z: 0}
+  greenSpawn: {x: 0, y: 0, z: 0}
+  pinkSpawn: {x: 0, y: 0, z: 0}
+  purpleSpawn: {x: 0, y: 0, z: 0}
+  redSpawn: {x: 0, y: 0, z: 0}
+  yellowSpawn: {x: 0, y: 0, z: 0}
+  blueSpawn: {x: 0, y: 0, z: 0}
+--- !u!4 &1539085550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539085548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6319332, y: 1.6584072, z: -36.21059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545296678 stripped
 GameObject:
