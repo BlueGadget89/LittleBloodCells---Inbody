@@ -52,6 +52,7 @@ public class GrabController : MonoBehaviour
         {
             other.gameObject.transform.position = GP.transform.position;
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());
+            other.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
             //Destroy(other.gameObject.GetComponent<PolygonCollider2D>());
             other.gameObject.transform.SetParent(GP.transform);
             havepiece = true; 
@@ -65,6 +66,7 @@ public class GrabController : MonoBehaviour
         {
             other.gameObject.transform.position = GP.transform.position;
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());
+            other.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
             //Destroy(other.gameObject.GetComponent<PolygonCollider2D>());
             other.gameObject.transform.SetParent(GP.transform);
             havepiece = true;
@@ -74,6 +76,7 @@ public class GrabController : MonoBehaviour
         {
             other.gameObject.transform.position = GP.transform.position;
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());
+            other.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
             //Destroy(other.gameObject.GetComponent<PolygonCollider2D>());
             other.gameObject.transform.SetParent(GP.transform);
             havepiece = true;
