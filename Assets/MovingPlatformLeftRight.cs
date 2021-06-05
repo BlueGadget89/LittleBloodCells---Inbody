@@ -24,70 +24,42 @@ public class MovingPlatformLeftRight : MonoBehaviour
 
         leftright();
         Debug.Log(endpoint);
+        Debug.Log(startpoint);
 
     }
 
-    void updown()
-    {
-
-        endpoint = startpoint.y + moverange;
-        if (stage1)
-        {
-            if (transform.position.y < endpoint)
-            {
-                transform.position += new Vector3(0, movespeed, 0);
-            }
-            if (transform.position.y == endpoint)
-            {
-                stage1 = false;
-                stage2 = true;
-            }
-
-        }
-        if (stage2)
-        {
-            if (startpoint.y < transform.position.y)
-            {
-                transform.position -= new Vector3(0, movespeed, 0);
-            }
-            if (transform.position.y == startpoint.y)
-            {
-                stage1 = true;
-                stage2 = false;
-            }
-        }
-
-
-    }
     void leftright()
     {
         endpoint = startpoint.x + moverange;
-        if (stage1)
+        if (stage1)//move right
         {
-            if (transform.position.x < endpoint)
+             if (transform.position.x < endpoint)
             {
                 transform.position += new Vector3(movespeed, 0, 0);
+                
             }
-            if (transform.position.x == endpoint)
+            if (transform.position.x >= endpoint)
             {
                 stage1 = false;
                 stage2 = true;
             }
 
+
         }
-        if (stage2)
+        if (stage2)//move left
         {
             if (startpoint.x < transform.position.x)
             {
                 transform.position -= new Vector3(movespeed, 0, 0);
+                
             }
-            if (transform.position.x == startpoint.x)
+            if (transform.position.x <= startpoint.x)
             {
                 stage1 = true;
                 stage2 = false;
             }
+
         }
-
-
     }
+    
 }
