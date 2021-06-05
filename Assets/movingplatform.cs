@@ -24,6 +24,7 @@ public class movingplatform : MonoBehaviour
 
         updown();
         Debug.Log(endpoint);
+        
 
     }
 
@@ -31,26 +32,26 @@ public class movingplatform : MonoBehaviour
     {
         
         endpoint = startpoint.y + moverange;
-        if (stage1)
+        if (stage1)// move up
         {
             if (transform.position.y < endpoint)
             {
                 transform.position += new Vector3(0, movespeed, 0);
             }
-            if (transform.position.y == endpoint)
+            if (transform.position.y >= endpoint)
             {
                 stage1 = false;
                 stage2 = true;
             }
            
         }
-        if (stage2)
+        if (stage2)//move down
         {
             if (startpoint.y < transform.position.y)
             {
                 transform.position -= new Vector3(0, movespeed, 0);
             }
-            if(transform.position.y == startpoint.y)
+            if(transform.position.y <= startpoint.y)
             {
                 stage1 = true;
                 stage2 = false;
