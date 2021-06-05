@@ -18,13 +18,13 @@ public class GrabController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "pieces")
+        if (collision.gameObject.tag == "pieces" || collision.gameObject.tag == "pieces one" || collision.gameObject.tag == "pieces two")
         {
             onpiece = true;
         }
@@ -36,12 +36,11 @@ public class GrabController : MonoBehaviour
         
             onpiece = false;
         
-        
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "pieces" &&!havepiece && onpiece && Input.GetKey(KeyCode.Q))
+        if (!havepiece && onpiece && Input.GetKey(KeyCode.Q))
         {
             other.gameObject.transform.position = GP.transform.position;
             Destroy(other.gameObject.GetComponent<Rigidbody2D>());

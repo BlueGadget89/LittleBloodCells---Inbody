@@ -10,6 +10,8 @@ TagManager:
   - player
   - bullet
   - enemy
+  - 'pieces one '
+  - pieces two
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - enemy
+  - heart piece
   - 
   - 
   - 

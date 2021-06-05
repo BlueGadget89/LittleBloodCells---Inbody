@@ -32,7 +32,7 @@ public class HeartPieceDetectionScript2 : MonoBehaviour
         if (GrabArea.GetComponent<GrabController>().havepiece == true)
         {
             Debug.Log("h");
-            if (collision.gameObject.tag == "player")
+            if (collision.gameObject.tag == "player" )
             {
                 Debug.Log("piece has arrived");
                 missingHeartPiece.GetComponent<MissingHeartPieceScript2>().isOnPuzzle = true;
