@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 630535285}
   m_Layer: 0
   m_Name: MissingHeartPiece
-  m_TagString: pieces
+  m_TagString: 'pieces one '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 8366783749352151517, guid: 62e0c2015b8984b968d88eba817a0add,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e0c2015b8984b968d88eba817a0add, type: 3}
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   levelSelectText: {fileID: 1088607687}
   heartSilhouette: {fileID: 44047961}
   handSilhouette: {fileID: 1991501306}
-  heartLocked: {fileID: 2078218716}
+  heartLocked: {fileID: 0}
   sceneTransition: {fileID: 0}
 --- !u!1 &1757846719
 GameObject:
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 1757846722}
   - component: {fileID: 1757846721}
   m_Layer: 5
-  m_Name: Image
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1884,8 +1884,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: 0.0011720519}
-  m_SizeDelta: {x: 74.34, y: 130}
+  m_AnchoredPosition: {x: -149.5, y: 2.2}
+  m_SizeDelta: {x: 76, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039035236
 MonoBehaviour:
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 492ee7bd0f2c44b92a8e5b1132b0d920, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51556cfc6e9a6492f90e3136092ce286, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

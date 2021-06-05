@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8037232602479568930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundDetection
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -3071891029664097377}
   - component: {fileID: 8369110351063506248}
   - component: {fileID: 4634281211264479556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyTR
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -131,7 +131,9 @@ MonoBehaviour:
   Player: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5, type: 3}
   audio: {fileID: 4634281211264479556}
   speed: 2
+  gameManager: {fileID: 0}
   groundDetection: {fileID: 8037232602479568930}
+  sceneName: 
 --- !u!58 &8037232603001120106
 CircleCollider2D:
   m_ObjectHideFlags: 0
