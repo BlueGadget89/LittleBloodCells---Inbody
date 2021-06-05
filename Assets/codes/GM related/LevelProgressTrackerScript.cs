@@ -9,6 +9,7 @@ public class LevelProgressTrackerScript : MonoBehaviour
     public string sceneName;
     public bool handLevelComplete;
     public bool heartLevelComplete;
+    public bool brainLevelComplete;
     public Sprite handSick, heartSick, brainSick;
     public Sprite handHealed, heartHealed, brainHealed;
 
@@ -18,6 +19,7 @@ public class LevelProgressTrackerScript : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         handLevelComplete = false;
         heartLevelComplete = false;
+        brainLevelComplete = false;
     }
 
     // Update is called once per frame
@@ -55,11 +57,20 @@ public class LevelProgressTrackerScript : MonoBehaviour
             {
                 heartButton.GetComponent<Image>().sprite = heartHealed;
             }
-            if (heartLevelComplete == false && handLevelComplete == false)
+            if (heartLevelComplete == false || handLevelComplete == false)
             {
                 brainButton.GetComponent<Button>().interactable = false;
+                brainButton.GetComponent<Image>().sprite = brainSick;
             }
             if (heartLevelComplete == true && handLevelComplete == true)
+            {
+                brainButton.GetComponent<Button>().interactable = true;
+            }
+            if (brainLevelComplete == true)
+            {
+                brainButton.GetComponent<Image>().sprite = brainHealed;
+            }
+            if (heartLevelComplete == true && handLevelComplete == true && brainLevelComplete == true)
             {
                 Debug.Log("Game done");
             }
@@ -81,6 +92,10 @@ public class LevelProgressTrackerScript : MonoBehaviour
             {
                 heartLevelComplete = true;
             }
+        }
+        if (sceneName == "Brain level")
+        {
+            Debug.Log("Fuck");
         }
     }
 }

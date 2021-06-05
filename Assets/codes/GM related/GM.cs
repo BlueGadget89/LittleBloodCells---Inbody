@@ -24,7 +24,7 @@ public class GM : MonoBehaviour
     public int oldPieceCount;
     public AudioSource piecePickUpSource;
     public GameObject GlowingStatuePrefab;
-    public Vector3 GlowingStatuePos;
+    //public Vector3 GlowingStatuePos;
 
 
     // Start is called before the first frame update
@@ -41,6 +41,7 @@ public class GM : MonoBehaviour
         sceneName = currentScene.name;
         //called
         spwaner("Hand_Level");
+        GlowingStatuePrefab.GetComponent<SpriteRenderer>().enabled = false;
 
 
     }
@@ -63,7 +64,7 @@ public class GM : MonoBehaviour
             if (enemiesKilled >= 6)
             {
                 //This will manage what events occur upon victory.
-                //GlowingStatuePrefab.GetComponent<SpriteRenderer>.enabled = true;
+                GlowingStatuePrefab.GetComponent<SpriteRenderer>().enabled = true;
                 sceneChangeTimer += Time.deltaTime;
                 if (sceneChangeTimer >= 2f)
                 {
