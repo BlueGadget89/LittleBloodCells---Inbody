@@ -2130,7 +2130,7 @@ PrefabInstance:
     - target: {fileID: 8366783749352151517, guid: 62e0c2015b8984b968d88eba817a0add,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e0c2015b8984b968d88eba817a0add, type: 3}
@@ -4953,7 +4953,6 @@ MonoBehaviour:
   oldPieceCount: 0
   piecePickUpSource: {fileID: 1281389741}
   GlowingStatuePrefab: {fileID: 945915206}
-  GlowingStatuePos: {x: -0.04, y: 2.98, z: 0}
 --- !u!4 &1281389739
 Transform:
   m_ObjectHideFlags: 0
@@ -6587,12 +6586,12 @@ PrefabInstance:
     - target: {fileID: 1352330015909718193, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1352330015909718193, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.97
+      value: 2.927
       objectReference: {fileID: 0}
     - target: {fileID: 1352330015909718193, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
         type: 3}
@@ -6639,6 +6638,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1352330015909718193, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.62268573
+      objectReference: {fileID: 0}
     - target: {fileID: 2105810285579120801, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
         type: 3}
       propertyPath: m_Enabled
@@ -6652,7 +6656,7 @@ PrefabInstance:
     - target: {fileID: 5204910369009122032, guid: 8dd6cb809aa9c4f57a8c165d9a61e191,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dd6cb809aa9c4f57a8c165d9a61e191, type: 3}

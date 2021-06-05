@@ -48,4 +48,8 @@ public class menu_control : MonoBehaviour
     {
         SceneManager.LoadScene("Heart_Level");
     }
+    public void BrainLevelButton()
+    {
+        SceneManager.LoadScene("Brain level");
+    }
 }
