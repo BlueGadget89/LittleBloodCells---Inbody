@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelProgressTrackerScript : MonoBehaviour
 {
     public string sceneName;
     public bool handLevelComplete;
     public bool heartLevelComplete;
+    public Sprite handSick, heartSick, brainSick;
+    public Sprite handHealed, heartHealed, brainHealed;
 
     // Start is called before the first frame update
     void Start()
@@ -28,17 +31,33 @@ public class LevelProgressTrackerScript : MonoBehaviour
             GameObject heartButton = GameObject.Find("heart");
             GameObject heartSilhouette = GameObject.Find("Heart Silhouette");
             GameObject heartLocked = GameObject.Find("HeartLocked");
+            GameObject handButton = GameObject.Find("hand");
+            GameObject brainButton = GameObject.Find("brain");
             if (handLevelComplete == false)
             {
                 heartLocked.SetActive(true);
                 heartSilhouette.SetActive(false);
-                heartButton.SetActive(false);
+                heartButton.GetComponent<Button>().interactable = false;
+                handButton.GetComponent<Image>().sprite = handSick;
             }
             if (handLevelComplete == true)
             {
                 heartSilhouette.SetActive(true);
                 heartLocked.SetActive(false);
-                heartButton.SetActive(true);
+                heartButton.GetComponent<Button>().interactable = true;
+                handButton.GetComponent<Image>().sprite = handHealed;
+            }
+            if (heartLevelComplete == false)
+            {
+                heartButton.GetComponent<Image>().sprite = heartSick;
+            }
+            if (heartLevelComplete == true)
+            {
+                heartButton.GetComponent<Image>().sprite = heartHealed;
+            }
+            if (heartLevelComplete == false && handLevelComplete == false)
+            {
+                brainButton.GetComponent<Button>().interactable = false;
             }
             if (heartLevelComplete == true && handLevelComplete == true)
             {

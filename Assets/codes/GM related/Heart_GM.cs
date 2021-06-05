@@ -75,7 +75,7 @@ public class Heart_GM : MonoBehaviour
         }
         if (loseTimer >= 3)
         {
-            SceneManager.LoadScene("HandGameOverScreen");
+            SceneManager.LoadScene("HeartGameOver");
         }
 
     }

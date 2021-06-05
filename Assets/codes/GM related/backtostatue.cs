@@ -38,7 +38,9 @@ public class backtostatue : MonoBehaviour
             Graper.GetComponent<GrabController>().havepiece = false;
             pieces.GetComponent<SpriteRenderer>().enabled = true;
             gameManager.GetComponent<GM>().pieceCount += 1;
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            GetComponent<PolygonCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
             /*
             gameObject.transform.position = postion;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);

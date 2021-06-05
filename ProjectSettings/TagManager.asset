@@ -10,8 +10,8 @@ TagManager:
   - player
   - bullet
   - enemy
-  - 'pieces one '
-  - pieces two
+  - missingHeartPiece1
+  - missingHeartPiece2
   layers:
   - Default
   - TransparentFX

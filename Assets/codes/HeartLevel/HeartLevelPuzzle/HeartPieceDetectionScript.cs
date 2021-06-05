@@ -32,10 +32,14 @@ public class HeartPieceDetectionScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "player")
             {
-                missingHeartPiece.GetComponent<missingHeartPieceScript>().isOnPuzzle = true;
-                heartPlatform.GetComponent<HeartPlatformDetection>().missingPieceAdded = true;
-                GrabArea.GetComponent<GrabController>().havepiece = false;
-                hiddenHeartPiece.GetComponent<hiddenHeartPieceScript>().onPuzzle = true;
+                if (Player.GetComponent<PlayerMovementScript>().holdingHeartPiece1 == true)
+                {
+                    missingHeartPiece.GetComponent<missingHeartPieceScript>().isOnPuzzle = true;
+                    heartPlatform.GetComponent<HeartPlatformDetection>().missingPieceAdded = true;
+                    GrabArea.GetComponent<GrabController>().havepiece = false;
+                    hiddenHeartPiece.GetComponent<hiddenHeartPieceScript>().onPuzzle = true;
+                    Player.GetComponent<PlayerMovementScript>().holdingHeartPiece1 = false;
+                }
             }
         }
     }

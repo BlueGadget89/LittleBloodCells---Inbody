@@ -164,6 +164,12 @@ MonoBehaviour:
   sceneName: 
   handLevelComplete: 0
   heartLevelComplete: 0
+  handSick: {fileID: 21300000, guid: 7179f74be52374594b44de4fafa32424, type: 3}
+  heartSick: {fileID: 21300000, guid: 3818889ceb0264cd6a8c1041d29fb033, type: 3}
+  brainSick: {fileID: 21300000, guid: 4364f18e3800d4144a7f945e6c88bade, type: 3}
+  handHealed: {fileID: 21300000, guid: 492ee7bd0f2c44b92a8e5b1132b0d920, type: 3}
+  heartHealed: {fileID: 21300000, guid: e0428c70073ca4e4284c2529cf0cfaa5, type: 3}
+  brainHealed: {fileID: 21300000, guid: 88eeff1580de847a88b96115e3802e5e, type: 3}
 --- !u!4 &334693124
 Transform:
   m_ObjectHideFlags: 0
