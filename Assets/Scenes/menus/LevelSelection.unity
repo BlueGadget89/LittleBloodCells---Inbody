@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 8366783749352151517, guid: 62e0c2015b8984b968d88eba817a0add,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e0c2015b8984b968d88eba817a0add, type: 3}
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   levelSelectText: {fileID: 1088607687}
   heartSilhouette: {fileID: 44047961}
   handSilhouette: {fileID: 1991501306}
-  heartLocked: {fileID: 0}
+  heartLocked: {fileID: 2078218716}
   sceneTransition: {fileID: 0}
 --- !u!1 &1757846719
 GameObject:
