@@ -140,7 +140,17 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GetComponent<Animator>().Play("Idle");
         }
-
+        if (collision.gameObject.tag == "movingBrainPlatform")
+        {
+            gameObject.transform.parent = collision.gameObject.transform;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "movingBrainPlatform")
+        {
+            gameObject.transform.parent = null;
+        }
     }
 
     /*private void OnCollisionExit2D(Collision2D collision)
