@@ -164,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.61368084, y: -0.8445151}
+  m_Offset: {x: -0.61368084, y: -0.94392014}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -175,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.249407, y: 0.16674471}
+  m_Size: {x: 7.249407, y: 0.16674232}
   m_EdgeRadius: 0
 --- !u!1 &135129791
 GameObject:
@@ -314,6 +314,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &401124008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4298148357543345734, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 621744633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419517324
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &419517325
 AudioListener:
   m_ObjectHideFlags: 0
@@ -408,6 +414,8 @@ GameObject:
   - component: {fileID: 432139587}
   - component: {fileID: 432139588}
   - component: {fileID: 432139589}
+  - component: {fileID: 432139590}
+  - component: {fileID: 432139591}
   m_Layer: 0
   m_Name: anger_3
   m_TagString: Untagged
@@ -468,7 +476,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 36bbc0fd72d434323a48c63da0af7e98, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -490,13 +498,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b226a1180f9948258cf96fcae5eafd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionGM: {fileID: 0}
-  brainGM: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  brainGM: {fileID: 518389203}
   onhit: 0
   colorRenderer: {fileID: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  noHitColor: {r: 0, g: 0, b: 0, a: 0}
-  contactOrderListPlace: 0
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  noHitColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  contactOrderListPlace: 3
+--- !u!58 &432139590
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432139586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.270691, y: 2.3660378}
+  serializedVersion: 2
+  m_Radius: 1.1157732
+--- !u!50 &432139591
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432139586}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &467077556
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467077556}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 24.859093, y: 7.8286567, z: 2.7649796}
+  m_LocalPosition: {x: 25.12, y: 7.8286567, z: 2.7649796}
   m_LocalScale: {x: 1, y: 0.40000048, z: 1}
   m_Children: []
   m_Father: {fileID: 1143346600}
@@ -644,6 +689,10 @@ MonoBehaviour:
   happyCamera: {fileID: 313438657}
   angerCamera: {fileID: 419517326}
   fearCamera: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  player: {fileID: 401124008}
+  playerPositionTracker: {fileID: 1185469925}
+  playerPos: {x: 0, y: 0, z: 0}
 --- !u!4 &518389205
 Transform:
   m_ObjectHideFlags: 0
@@ -703,6 +752,8 @@ GameObject:
   - component: {fileID: 581442916}
   - component: {fileID: 581442917}
   - component: {fileID: 581442918}
+  - component: {fileID: 581442919}
+  - component: {fileID: 581442920}
   m_Layer: 0
   m_Name: anger_2
   m_TagString: Untagged
@@ -763,7 +814,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: be1baf7ab89344b27bcf7f9ea4554a81, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -785,13 +836,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b226a1180f9948258cf96fcae5eafd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionGM: {fileID: 0}
-  brainGM: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  brainGM: {fileID: 518389203}
   onhit: 0
   colorRenderer: {fileID: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  noHitColor: {r: 0, g: 0, b: 0, a: 0}
-  contactOrderListPlace: 0
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  noHitColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  contactOrderListPlace: 2
+--- !u!58 &581442919
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581442915}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -8.002763, y: 1.8789124}
+  serializedVersion: 2
+  m_Radius: 1.1853628
+--- !u!50 &581442920
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581442915}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &585888117
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,12 +1002,12 @@ PrefabInstance:
     - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.505493
+      value: -29.50549
       objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 4298148357543345730, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
@@ -1014,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 5523219389862880778, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.97
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 5523219389862880778, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
@@ -1084,7 +1172,7 @@ PrefabInstance:
     - target: {fileID: 5523219389862881012, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: yMax
-      value: 1.04
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 5523219389862881014, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
@@ -1805,6 +1893,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1185469925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185469926}
+  m_Layer: 0
+  m_Name: PlayerPositionTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185469926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185469925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.7254305, y: -2.4846826, z: -73.50868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358108585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2153,8 @@ GameObject:
   - component: {fileID: 1528894071}
   - component: {fileID: 1528894072}
   - component: {fileID: 1528894073}
+  - component: {fileID: 1528894074}
+  - component: {fileID: 1528894075}
   m_Layer: 0
   m_Name: anger_4
   m_TagString: Untagged
@@ -2095,7 +2215,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5c8c0cd230a9e47cbaf1aef8e1b63555, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2117,13 +2237,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b226a1180f9948258cf96fcae5eafd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionGM: {fileID: 0}
-  brainGM: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  brainGM: {fileID: 518389203}
   onhit: 0
   colorRenderer: {fileID: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  noHitColor: {r: 0, g: 0, b: 0, a: 0}
-  contactOrderListPlace: 0
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  noHitColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  contactOrderListPlace: 4
+--- !u!58 &1528894074
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528894070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.678061, y: 0.5799098}
+  serializedVersion: 2
+  m_Radius: 1.6028533
+--- !u!50 &1528894075
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528894070}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1538600655
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,7 +3484,7 @@ GameObject:
   - component: {fileID: 1873899087}
   - component: {fileID: 1873899088}
   m_Layer: 0
-  m_Name: Happy puzzle
+  m_Name: Happy puzzle (Emotion GM)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3423,9 +3580,11 @@ MonoBehaviour:
   P5hit: 0
   P6hit: 0
   brainGM: {fileID: 518389203}
-  currentPiece: 0
   contactOrder: 
   correctOrder: 
+  happyComplete: 0
+  angerComplete: 0
+  fearComplete: 0
 --- !u!1 &1886384870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4706,6 +4865,8 @@ GameObject:
   - component: {fileID: 2032571972}
   - component: {fileID: 2032571973}
   - component: {fileID: 2032571974}
+  - component: {fileID: 2032571975}
+  - component: {fileID: 2032571976}
   m_Layer: 0
   m_Name: anger_1
   m_TagString: Untagged
@@ -4766,7 +4927,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 460792fcf700346fa8a179efccc86247, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4788,13 +4949,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b226a1180f9948258cf96fcae5eafd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionGM: {fileID: 0}
-  brainGM: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  brainGM: {fileID: 518389203}
   onhit: 0
   colorRenderer: {fileID: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  noHitColor: {r: 0, g: 0, b: 0, a: 0}
-  contactOrderListPlace: 0
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  noHitColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  contactOrderListPlace: 1
+--- !u!58 &2032571975
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032571971}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.550768, y: -3.3028822}
+  serializedVersion: 2
+  m_Radius: 1.2462711
+--- !u!50 &2032571976
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032571971}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &2035716862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,6 +5061,8 @@ GameObject:
   - component: {fileID: 2109669935}
   - component: {fileID: 2109669936}
   - component: {fileID: 2109669937}
+  - component: {fileID: 2109669938}
+  - component: {fileID: 2109669939}
   m_Layer: 0
   m_Name: anger_5
   m_TagString: Untagged
@@ -4923,7 +5123,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5c8ab27c62f0f472db05826abed3a9bb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4945,13 +5145,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b226a1180f9948258cf96fcae5eafd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionGM: {fileID: 0}
-  brainGM: {fileID: 0}
+  emotionGM: {fileID: 1873899085}
+  brainGM: {fileID: 518389203}
   onhit: 0
   colorRenderer: {fileID: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  noHitColor: {r: 0, g: 0, b: 0, a: 0}
-  contactOrderListPlace: 0
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  noHitColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+  contactOrderListPlace: 5
+--- !u!58 &2109669938
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109669934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.3351765, y: 2.2964482}
+  serializedVersion: 2
+  m_Radius: 1.0693865
+--- !u!50 &2109669939
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109669934}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &2123863135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,26 +5216,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123863135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.04, y: -10.94, z: 15.065932}
+  m_LocalPosition: {x: -31.04, y: -12.74, z: 15.065932}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 127687196}
   m_Father: {fileID: 529829748}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2123863137
-BoxCollider:
+--- !u!61 &2123863137
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123863135}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2904892, y: 2.178666}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18, y: 12}
+    newSize: {x: 18, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.899605, y: 0.27493382, z: 0.2}
-  m_Center: {x: -0.34007645, y: 2.1632419, z: 0}
+  m_Size: {x: 14.97892, y: 0.49664497}
+  m_EdgeRadius: 0
 --- !u!212 &2123863138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5060,7 +5310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e198dbe8db50247c397f3575cc81f432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.15
+  movespeed: 0.1
   moverange: 15
   endpoint: 0
   stage1: 0
