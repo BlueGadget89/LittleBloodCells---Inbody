@@ -12,6 +12,7 @@ public class BrainPuzzle : MonoBehaviour
     public List<int> contactOrder;
     public List<int> correctOrder;
     public bool happyComplete, angerComplete, fearComplete;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,7 @@ public class BrainPuzzle : MonoBehaviour
             }
             if (contactOrder.Count == correctOrder.Count)
             {
+                happyComplete = true;
                 StartCoroutine(transitionToAnger());
             }
         }
@@ -87,10 +89,10 @@ public class BrainPuzzle : MonoBehaviour
                 {
                     StartCoroutine(ResetAngerPuzzle());
                 }
-            for (int index = 0; index < contactOrder.Count; index++)
-            if (contactOrder[index] == correctOrder[index])
+            //for (int index = 0; index < contactOrder.Count; index++)
+            if (contactOrder.Count == correctOrder.Count)
             {
-                //StartCoroutine(transitionToAnger());
+                StartCoroutine(transitionToFear());
             }
         }
 
@@ -184,7 +186,7 @@ public class BrainPuzzle : MonoBehaviour
         P5.GetComponent<Brain_piece_behavior>().onhit = false;
         brainGM.GetComponent<BrainGM>().happyCamera.GetComponent<Camera>().enabled = false;
         brainGM.GetComponent<BrainGM>().playerCamera.GetComponent<Camera>().enabled = true;
-        //currentPiece = 1;
+        Player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(3, 2, 0);
         yield return null;
     }
     public IEnumerator transitionToFear()

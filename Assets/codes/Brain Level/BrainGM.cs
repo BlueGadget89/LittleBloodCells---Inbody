@@ -19,6 +19,9 @@ public class BrainGM : MonoBehaviour
         emotion = "Happy";
         happyCamera.GetComponent<Camera>().enabled = true;
         playerCamera.GetComponent<Camera>().enabled = false;
+        angerCamera.GetComponent<Camera>().enabled = false;
+        happyplatform.GetComponent<SpriteRenderer>().enabled = false;
+        happyplatform.GetComponent<PolygonCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -38,7 +41,18 @@ public class BrainGM : MonoBehaviour
         */
         if (emotionGM.GetComponent<BrainPuzzle>().happyComplete == true)
         {
+            Debug.Log("happy complete");
+            angerblock.GetComponent<BoxCollider2D>().enabled = false;
             emotion = "Anger";
+            happyplatform.GetComponent<SpriteRenderer>().enabled = true;
+            happyplatform.GetComponent<PolygonCollider2D>().enabled = true;
+        }
+        if (playerPositionTracker.GetComponent<Transform>().position.x >= 14.84 && playerPositionTracker.GetComponent<Transform>().position.x <= 57.32 && emotionGM.GetComponent<BrainPuzzle>().angerComplete == false)
+        {
+            playerCamera.GetComponent<Camera>().enabled = false;
+            angerCamera.GetComponent<Camera>().enabled = true;
+            happyCamera.GetComponent<Camera>().enabled = false;
+            player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(20, 3, 0);
         }
     }
 }
