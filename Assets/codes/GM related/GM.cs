@@ -66,7 +66,7 @@ public class GM : MonoBehaviour
                 //This will manage what events occur upon victory.
                 GlowingStatuePrefab.GetComponent<SpriteRenderer>().enabled = true;
                 sceneChangeTimer += Time.deltaTime;
-                if (sceneChangeTimer >= 2f)
+                if (sceneChangeTimer >= 4f)
                 {
                     SceneManager.LoadScene("Win Screen");
                 }
