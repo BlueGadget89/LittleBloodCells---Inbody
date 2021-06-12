@@ -92,7 +92,8 @@ public class BrainPuzzle : MonoBehaviour
             //for (int index = 0; index < contactOrder.Count; index++)
             if (contactOrder.Count == correctOrder.Count)
             {
-                //StartCoroutine(transitionToFear());
+                angerComplete = true;
+               StartCoroutine(transitionToFear());
             }
         }
 
@@ -134,6 +135,7 @@ public class BrainPuzzle : MonoBehaviour
         P3.GetComponent<Brain_piece_behavior>().onhit = false;
         P4.GetComponent<Brain_piece_behavior>().onhit = false;
         P5.GetComponent<Brain_piece_behavior>().onhit = false;
+        contactOrder.Clear();
         //currentPiece = 1;
         yield return null;
     }
@@ -193,6 +195,12 @@ public class BrainPuzzle : MonoBehaviour
     public IEnumerator transitionToFear()
     {
         correctOrder.Add(6);
+        P1 = GameObject.Find("Fear1");
+        P2 = GameObject.Find("Fear2");
+        P3 = GameObject.Find("Fear3");
+        P4 = GameObject.Find("Fear4");
+        P5 = GameObject.Find("Fear5");
+        P6 = GameObject.Find("Fear6");
         Debug.Log("Transitioning to Fear");
         P1.GetComponent<CircleCollider2D>().enabled = true;
         P1.GetComponent<Rigidbody2D>().simulated = true;
