@@ -97,9 +97,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   BS: 20
+  bulletTimer: 0
   outcome: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
+  sceneName: 
 --- !u!58 &2867628583199541268
 CircleCollider2D:
   m_ObjectHideFlags: 0
