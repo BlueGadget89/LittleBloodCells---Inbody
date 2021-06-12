@@ -30,22 +30,30 @@ public class LevelProgressTrackerScript : MonoBehaviour
 
         if (sceneName == "LevelSelection")
         {
-            GameObject heartButton = GameObject.Find("heart");
-            GameObject heartSilhouette = GameObject.Find("Heart Silhouette");
-            GameObject heartLocked = GameObject.Find("HeartLocked");
-            GameObject handButton = GameObject.Find("hand");
-            GameObject brainButton = GameObject.Find("brain");
+            GameObject heartButton = GameObject.Find("heart"), handButton = GameObject.Find("hand"), brainButton = GameObject.Find("brain");
+            GameObject heartSilhouette = GameObject.Find("Heart Silhouette"), brainSilhouette = GameObject.Find("Brain Silhouette");
+            GameObject heartLocked = GameObject.Find("HeartLocked"), brainLocked = GameObject.Find("BrainLocked");
+            
+            
+            
             if (handLevelComplete == false)
             {
                 heartLocked.SetActive(true);
+                brainLocked.SetActive(true);
                 heartSilhouette.SetActive(false);
+                brainSilhouette.SetActive(false);
                 heartButton.GetComponent<Button>().interactable = false;
+                brainButton.GetComponent<Button>().interactable = false;
                 handButton.GetComponent<Image>().sprite = handSick;
             }
             if (handLevelComplete == true)
             {
                 heartSilhouette.SetActive(true);
                 heartLocked.SetActive(false);
+
+                brainLocked.SetActive(true);
+                brainSilhouette.SetActive(false);
+
                 heartButton.GetComponent<Button>().interactable = true;
                 handButton.GetComponent<Image>().sprite = handHealed;
             }
@@ -56,6 +64,8 @@ public class LevelProgressTrackerScript : MonoBehaviour
             if (heartLevelComplete == true)
             {
                 heartButton.GetComponent<Image>().sprite = heartHealed;
+                brainLocked.SetActive(false);
+                brainSilhouette.SetActive(true);
             }
             if (heartLevelComplete == false || handLevelComplete == false)
             {
