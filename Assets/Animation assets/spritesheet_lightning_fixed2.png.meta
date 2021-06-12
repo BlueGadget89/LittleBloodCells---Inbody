@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: ac334861190584ca1964703d404a2f4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4348206229756273499
+    second: spritesheet_lightning_fixed2_0
+  - first:
+      213: -5389310969469844777
+    second: spritesheet_lightning_fixed2_1
+  - first:
+      213: 3355846465847462490
+    second: spritesheet_lightning_fixed2_2
+  - first:
+      213: 4174007946665067628
+    second: spritesheet_lightning_fixed2_3
+  - first:
+      213: -5103929133835209844
+    second: spritesheet_lightning_fixed2_4
+  - first:
+      213: -3239044440811246414
+    second: spritesheet_lightning_fixed2_5
+  - first:
+      213: 5536733672445966523
+    second: spritesheet_lightning_fixed2_6
+  - first:
+      213: -1547034963445793159
+    second: spritesheet_lightning_fixed2_7
+  - first:
+      213: -395899977986344666
+    second: spritesheet_lightning_fixed2_8
+  - first:
+      213: 6318098774067603150
+    second: spritesheet_lightning_fixed2_9
+  - first:
+      213: -737353153529491589
+    second: spritesheet_lightning_fixed2_10
+  - first:
+      213: -1095893798048926468
+    second: spritesheet_lightning_fixed2_11
+  - first:
+      213: -2263918739729892944
+    second: spritesheet_lightning_fixed2_12
+  - first:
+      213: -6738265852917226591
+    second: spritesheet_lightning_fixed2_13
+  - first:
+      213: -8350954531124971812
+    second: spritesheet_lightning_fixed2_14
+  - first:
+      213: 7857377371617312869
+    second: spritesheet_lightning_fixed2_15
+  - first:
+      213: -991440052237909895
+    second: spritesheet_lightning_fixed2_16
+  - first:
+      213: -1162010404047657939
+    second: spritesheet_lightning_fixed2_17
+  - first:
+      213: -1122288520032349749
+    second: spritesheet_lightning_fixed2_18
+  - first:
+      213: 7374648884907265957
+    second: spritesheet_lightning_fixed2_19
+  - first:
+      213: 7499725030956835618
+    second: spritesheet_lightning_fixed2_20
+  - first:
+      213: 5472744508394218615
+    second: spritesheet_lightning_fixed2_21
+  - first:
+      213: 4363695633060064951
+    second: spritesheet_lightning_fixed2_22
+  - first:
+      213: -5241919552812407799
+    second: spritesheet_lightning_fixed2_23
+  - first:
+      213: -8753199123703353445
+    second: spritesheet_lightning_fixed2_24
+  - first:
+      213: -1601794850649130686
+    second: spritesheet_lightning_fixed2_25
+  - first:
+      213: 7913457554432182747
+    second: spritesheet_lightning_fixed2_26
+  - first:
+      213: -5568259677883171423
+    second: spritesheet_lightning_fixed2_27
+  - first:
+      213: 7612801495792920032
+    second: spritesheet_lightning_fixed2_28
+  - first:
+      213: 7586295263356892283
+    second: spritesheet_lightning_fixed2_29
+  - first:
+      213: 2220632586116650057
+    second: spritesheet_lightning_fixed2_30
+  - first:
+      213: 5008043232696708648
+    second: spritesheet_lightning_fixed2_31
+  - first:
+      213: 2291832846089062237
+    second: spritesheet_lightning_fixed2_32
+  - first:
+      213: 1641850976038896517
+    second: spritesheet_lightning_fixed2_33
+  - first:
+      213: -112542816769359745
+    second: spritesheet_lightning_fixed2_34
+  - first:
+      213: 5903447413364963974
+    second: spritesheet_lightning_fixed2_35
+  - first:
+      213: 1441780555150835825
+    second: spritesheet_lightning_fixed2_36
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1759
+        width: 1378
+        height: 1748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d26263db2af4b7e88ba6cd2fd6363e
+      internalID: -4348206229756273499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_1
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84cb49e456ee4250bbb07bd94607a8c
+      internalID: -5389310969469844777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_2
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 1759
+        width: 1378
+        height: 1748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0600fb190ff0945cfb2820a307bf1c52
+      internalID: 3355846465847462490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_3
+      rect:
+        serializedVersion: 2
+        x: 4166
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31644c0bfa32440ebb9ea381041c091c
+      internalID: 4174007946665067628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_4
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 1641
+        width: 1394
+        height: 1866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173692e5fcc5e4a57a62fbbfe79e7677
+      internalID: -5103929133835209844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_5
+      rect:
+        serializedVersion: 2
+        x: 5552
+        y: 1759
+        width: 1378
+        height: 1748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b08c168d015241049b982d7b38bca07
+      internalID: -3239044440811246414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_6
+      rect:
+        serializedVersion: 2
+        x: 6938
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b26783e833b442393266f3a8fc25df
+      internalID: 5536733672445966523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_7
+      rect:
+        serializedVersion: 2
+        x: 8324
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce82cf41e0642558af97e65a98d153
+      internalID: -1547034963445793159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_8
+      rect:
+        serializedVersion: 2
+        x: 9741
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c92525c489746df8a91317806dc930
+      internalID: -395899977986344666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_9
+      rect:
+        serializedVersion: 2
+        x: 11151
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7a39093cbdc46398c616e84a5f1a09
+      internalID: 6318098774067603150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_10
+      rect:
+        serializedVersion: 2
+        x: 12561
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe50f49b815a460da25c9b5b9883246
+      internalID: -737353153529491589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_11
+      rect:
+        serializedVersion: 2
+        x: 13931
+        y: 1749
+        width: 1378
+        height: 1758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686641748252e41a8b51ef3dea458aa9
+      internalID: -1095893798048926468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_12
+      rect:
+        serializedVersion: 2
+        x: 15391
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435997a95a7ae499095d4da851010cce
+      internalID: -2263918739729892944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_13
+      rect:
+        serializedVersion: 2
+        x: 16773
+        y: 1754
+        width: 1378
+        height: 1761
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329c5576016134cc7a8a77fdcbd9f414
+      internalID: -6738265852917226591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_14
+      rect:
+        serializedVersion: 2
+        x: 18164
+        y: 1754
+        width: 1378
+        height: 1763
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d249393653a40908fdebc6257aa4ab
+      internalID: -8350954531124971812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_15
+      rect:
+        serializedVersion: 2
+        x: 19605
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c582cf4c2859742cd8a4e0d56c502585
+      internalID: 7857377371617312869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_16
+      rect:
+        serializedVersion: 2
+        x: 20944
+        y: 1754
+        width: 1378
+        height: 1753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7193b0f7acc9348fba1a7ad7ada71622
+      internalID: -991440052237909895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_17
+      rect:
+        serializedVersion: 2
+        x: 22400
+        y: 1759
+        width: 1378
+        height: 1748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d95b65fbec84a7aa0f86068499dd19
+      internalID: -1162010404047657939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_18
+      rect:
+        serializedVersion: 2
+        x: 23747
+        y: 1754
+        width: 1378
+        height: 1761
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b93a53c3adf4723bd1ca1882d34b5c
+      internalID: -1122288520032349749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 1378
+        height: 1751
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8255c8591564890a7b8ca6660f757a
+      internalID: 7374648884907265957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_20
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 0
+        width: 1378
+        height: 1759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd58b12788a694fd487af61cae4a9548
+      internalID: 7499725030956835618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_21
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 0
+        width: 1378
+        height: 1759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c0375a295dd436a890d6d2d47c2cb6
+      internalID: 5472744508394218615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_22
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3
+        width: 1378
+        height: 1756
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000389d63c5a849048bea42b1f3d5355
+      internalID: 4363695633060064951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_23
+      rect:
+        serializedVersion: 2
+        x: 5571
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7915bf70c5c224c49b0bab12e00e4d68
+      internalID: -5241919552812407799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_24
+      rect:
+        serializedVersion: 2
+        x: 6980
+        y: 3
+        width: 1378
+        height: 1751
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8aa54206bd3435fbbaf5f614c6a4ac
+      internalID: -8753199123703353445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_25
+      rect:
+        serializedVersion: 2
+        x: 8374
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0437362248c4647b93900c2d8d1dfc
+      internalID: -1601794850649130686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_26
+      rect:
+        serializedVersion: 2
+        x: 9783
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63d041d2c0b9498b94cf2f63cccbb5b
+      internalID: 7913457554432182747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_27
+      rect:
+        serializedVersion: 2
+        x: 11177
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1994a2bb99f54e918991794929a65ac
+      internalID: -5568259677883171423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_28
+      rect:
+        serializedVersion: 2
+        x: 12563
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234e86fad779449d68716d0c660572e4
+      internalID: 7612801495792920032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_29
+      rect:
+        serializedVersion: 2
+        x: 13973
+        y: 0
+        width: 1378
+        height: 1749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793199ef790aa46bcbc64c01917b92cc
+      internalID: 7586295263356892283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_30
+      rect:
+        serializedVersion: 2
+        x: 15343
+        y: 0
+        width: 1378
+        height: 1749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25753974a53f749d78aa19ec1cc6ba51
+      internalID: 2220632586116650057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_31
+      rect:
+        serializedVersion: 2
+        x: 16768
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dec4905d8d044a4a6346928d97808a
+      internalID: 5008043232696708648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_32
+      rect:
+        serializedVersion: 2
+        x: 18130
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29b2d260d3a948a3b5db0323626c35c
+      internalID: 2291832846089062237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_33
+      rect:
+        serializedVersion: 2
+        x: 19556
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e2fcaaa52cc4567b193f2ee015f2fb
+      internalID: 1641850976038896517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_34
+      rect:
+        serializedVersion: 2
+        x: 20942
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9f52044cae747caa6b448b1afc90b6
+      internalID: -112542816769359745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_35
+      rect:
+        serializedVersion: 2
+        x: 22344
+        y: 0
+        width: 1378
+        height: 1754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4722960fcba04dc195222129ebfe81c
+      internalID: 5903447413364963974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_lightning_fixed2_36
+      rect:
+        serializedVersion: 2
+        x: 23753
+        y: 19
+        width: 1378
+        height: 1735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc479e31cb1f4cc793d275e1fbbd2ab
+      internalID: 1441780555150835825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

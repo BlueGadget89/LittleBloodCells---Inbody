@@ -13,6 +13,7 @@ public class BrainPuzzle : MonoBehaviour
     public List<int> correctOrder;
     public bool happyComplete, angerComplete, fearComplete;
     public GameObject Player;
+    public GameObject playerDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,9 @@ public class BrainPuzzle : MonoBehaviour
             if (contactOrder[index] != correctOrder[index])
             {
                 StartCoroutine(ResetHappyPuzzle());
+
+                Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
+                playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
             }
             if (contactOrder.Count == correctOrder.Count)
             {
@@ -87,6 +91,8 @@ public class BrainPuzzle : MonoBehaviour
             for (int index = 0; index < contactOrder.Count; index++)
                 if (contactOrder[index] != correctOrder[index])
                 {
+                    Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
+                    playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
                     StartCoroutine(ResetAngerPuzzle());
                 }
             //for (int index = 0; index < contactOrder.Count; index++)
@@ -94,6 +100,46 @@ public class BrainPuzzle : MonoBehaviour
             {
                 angerComplete = true;
                StartCoroutine(transitionToFear());
+            }
+        }
+        if (brainGM.GetComponent<BrainGM>().emotion == "Fear")
+        {
+            if (P1.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P1hit = true;
+            }
+            if (P2.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P2hit = true;
+            }
+            if (P3.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P3hit = true;
+            }
+            if (P4.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P4hit = true;
+            }
+            if (P5.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P5hit = true;
+            }
+            if (P6.GetComponent<Brain_piece_behavior>().onhit == true)
+            {
+                P6hit = true;
+            }
+            for (int index = 0; index < contactOrder.Count; index++)
+                if (contactOrder[index] != correctOrder[index])
+                {
+                    Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
+                    playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                    StartCoroutine(ResetFearPuzzle());
+                }
+            //for (int index = 0; index < contactOrder.Count; index++)
+            if (contactOrder.Count == correctOrder.Count)
+            {
+                fearComplete = true;
+                Debug.Log("Level Complete");
             }
         }
 
@@ -194,6 +240,7 @@ public class BrainPuzzle : MonoBehaviour
     }
     public IEnumerator transitionToFear()
     {
+        contactOrder.Clear();
         correctOrder.Add(6);
         P1 = GameObject.Find("Fear1");
         P2 = GameObject.Find("Fear2");

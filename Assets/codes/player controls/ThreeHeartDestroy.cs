@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ThreeHeartDestroy : MonoBehaviour
 {
@@ -11,21 +12,27 @@ public class ThreeHeartDestroy : MonoBehaviour
     Color damageColor = Color.red;
     Color OriginalColor;
     SpriteRenderer ColorRenderer;
-    //public string sceneName;
+    public string sceneName;
+    public Image brainLevelColorRenderer;
 
     //public GameObject heartPlatform1;
     //public GameObject heartPlatform2;
-
     // Start is called before the first frame update
     void Start()
     {
-        ColorRenderer = GetComponent<SpriteRenderer>();
-        OriginalColor = ColorRenderer.material.color;
+        if (sceneName == "Hand_Level" || sceneName == "Heart_Level")
+        {
+            ColorRenderer = GetComponent<SpriteRenderer>();
+            OriginalColor = ColorRenderer.material.color;
+        }
         Scene currentScene = SceneManager.GetActiveScene();
-
-
-        /*
         sceneName = currentScene.name;
+        if (sceneName == "Brain level")
+        {
+            brainLevelColorRenderer = GetComponent<Image>();
+            OriginalColor = brainLevelColorRenderer.material.color;
+        }
+        /*
         if (sceneName == "Heart_Level")
         {
             heartPlatform1 = GameObject.Find("HeartPuzzlePlatform");
@@ -37,17 +44,35 @@ public class ThreeHeartDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == true)
+        if (sceneName == "Hand_Level" || sceneName == "Heart_Level")
         {
-            ColorRenderer.material.color = damageColor;
+            if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == true)
+            {
+                ColorRenderer.material.color = damageColor;
+            }
+            if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == false)
+            {
+                ColorRenderer.material.color = OriginalColor;
+            }
+            if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
-        if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == false)
+        if (sceneName == "Brain level")
         {
-            ColorRenderer.material.color = OriginalColor;
-        }
-        if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
-        {
-            GetComponent<SpriteRenderer>().enabled = false;
+            if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == true)
+            {
+                brainLevelColorRenderer.material.color = damageColor;
+            }
+            if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == false)
+            {
+                brainLevelColorRenderer.material.color = OriginalColor;
+            }
+            if (Player.GetComponent<PlayerMovementScript>().playerHp == 0)
+            {
+                Destroy(gameObject);
+            }
         }
         /*
         if (sceneName == "Heart_Level")

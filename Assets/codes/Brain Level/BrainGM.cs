@@ -58,12 +58,20 @@ public class BrainGM : MonoBehaviour
         if (emotionGM.GetComponent<BrainPuzzle>().angerComplete == true)
         {
             angerCamera.GetComponent<Camera>().enabled = false;
-            fearCamera.GetComponent<Camera>().enabled = true;
+            playerCamera.GetComponent<Camera>().enabled = true;
             Debug.Log("anger complete");
-            angerblock.GetComponent<BoxCollider2D>().enabled = false;
+            fearblock.GetComponent<BoxCollider2D>().enabled = false;
             emotion = "Fear";
             angerplatform.GetComponent<SpriteRenderer>().enabled = true;
             angerplatform.GetComponent<PolygonCollider2D>().enabled = true;
+        }
+        if (playerPositionTracker.GetComponent<Transform>().position.x >= 63)
+        {
+            playerCamera.GetComponent<Camera>().enabled = false;
+            angerCamera.GetComponent<Camera>().enabled = false;
+            happyCamera.GetComponent<Camera>().enabled = false;
+            fearCamera.GetComponent<Camera>().enabled = true;
+            player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(20, 3, 0);
         }
     }
 }
