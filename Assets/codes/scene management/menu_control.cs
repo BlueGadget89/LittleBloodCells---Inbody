@@ -10,7 +10,7 @@ public class menu_control : MonoBehaviour
     public GameObject heartintro;
     public GameObject brainintro;
     public GameObject levelSelectText;
-    public GameObject heartSilhouette, handSilhouette, heartLocked;
+    public GameObject heartSilhouette, handSilhouette,brainSilhouette, heartLocked,brainLocked;
     public GameObject sceneTransition;
 
     public void PlayGame()
@@ -24,6 +24,7 @@ public class menu_control : MonoBehaviour
     }
     public void Handlevel()
     {
+        brainLocked.SetActive(false);
         heartintro.SetActive(false);
         handintro.SetActive(true);
         levelSelectText.SetActive(false);
@@ -37,6 +38,7 @@ public class menu_control : MonoBehaviour
     }
     public void HeartLevel()
     {
+        brainLocked.SetActive(false);
         handintro.SetActive(false);
         heartintro.SetActive(true);
         levelSelectText.SetActive(false);
@@ -48,8 +50,21 @@ public class menu_control : MonoBehaviour
     {
         SceneManager.LoadScene("Heart_Level");
     }
+    public void BrainLevel()
+    {
+        brainLocked.SetActive(false);
+        handintro.SetActive(false);
+        brainintro.SetActive(true);
+        heartintro.SetActive(false);
+        levelSelectText.SetActive(false);
+        heartSilhouette.SetActive(false);
+        brainSilhouette.SetActive(false);
+        handSilhouette.SetActive(false);
+        heartLocked.SetActive(false);
+    }
     public void BrainLevelButton()
     {
+        
         SceneManager.LoadScene("Brain level");
     }
 }

@@ -22,7 +22,7 @@ public class HeartVictoryQuit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("Quit Heart Level");
-            SceneManager.LoadScene("OutroCutscene");
+            SceneManager.LoadScene("LevelSelection");
         }
     }
     private void OnMouseEnter()
