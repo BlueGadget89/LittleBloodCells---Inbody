@@ -12,12 +12,14 @@ public class aiming : MonoBehaviour
     public GameObject Player;
     public float timer;
     public bool canshoot;
+    public GameObject mainCamera;
    
     // Start is called before the first frame update
     void Start()
     {
         canshoot = true;
         outcome = GameObject.Find("outcome");
+        mainCamera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame

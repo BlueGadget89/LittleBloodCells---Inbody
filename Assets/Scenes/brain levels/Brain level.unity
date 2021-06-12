@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3003f3cc78844953ba995bfc282609c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.15
+  movespeed: 0.13
   moverange: 15
   endpoint: 0
   stage1: 0
@@ -344,7 +344,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5569391, y: 0.5012417}
+  m_Offset: {x: 0.29006672, y: 0.5012417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -355,7 +355,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.461153, y: 0.26201105}
+  m_Size: {x: 5.994898, y: 0.26201105}
   m_EdgeRadius: 0
 --- !u!1 &313438654
 GameObject:
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 419517325}
   m_Layer: 0
   m_Name: Anger Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,7 +994,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2609291, y: 1.8917427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1005,7 +1005,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 12}
+  m_Size: {x: 14.477455, y: 0.7800064}
   m_EdgeRadius: 0
 --- !u!1 &581442915
 GameObject:
