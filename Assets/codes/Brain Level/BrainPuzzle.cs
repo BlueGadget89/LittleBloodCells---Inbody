@@ -92,7 +92,7 @@ public class BrainPuzzle : MonoBehaviour
             //for (int index = 0; index < contactOrder.Count; index++)
             if (contactOrder.Count == correctOrder.Count)
             {
-                StartCoroutine(transitionToFear());
+                //StartCoroutine(transitionToFear());
             }
         }
 
@@ -162,6 +162,7 @@ public class BrainPuzzle : MonoBehaviour
     }
     public IEnumerator transitionToAnger()
     {
+        contactOrder.Clear();
         correctOrder.Add(5);
         Debug.Log("Transitioning to Anger");
         P1 = GameObject.Find("anger_1");
