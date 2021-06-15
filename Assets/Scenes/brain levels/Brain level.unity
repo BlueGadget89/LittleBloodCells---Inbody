@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 570234089}
   m_Layer: 0
   m_Name: cloud_5
-  m_TagString: movingBrainPlatform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2607,6 +2607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 11.29954
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523219389862881013, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: m_Depth
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5523219389862881014, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
@@ -5974,6 +5979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadingImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366783749352151517, guid: 62e0c2015b8984b968d88eba817a0add,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e0c2015b8984b968d88eba817a0add, type: 3}

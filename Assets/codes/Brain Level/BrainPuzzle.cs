@@ -66,7 +66,7 @@ public class BrainPuzzle : MonoBehaviour
                 StartCoroutine(ResetHappyPuzzle());
                 wrongOrderCount += 1;
                 Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
-                playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                //playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
             }
             if (contactOrder.Count == correctOrder.Count)
             {
@@ -105,7 +105,7 @@ public class BrainPuzzle : MonoBehaviour
                 if (contactOrder[index] != correctOrder[index])
                 {
                     Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
-                    playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                    //playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
                     wrongOrderCount += 1;
                     StartCoroutine(ResetAngerPuzzle());
                 }
@@ -151,7 +151,7 @@ public class BrainPuzzle : MonoBehaviour
                 if (contactOrder[index] != correctOrder[index])
                 {
                     Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
-                    playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                    //playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
                     wrongOrderCount += 1;
                     StartCoroutine(ResetFearPuzzle());
                 }
