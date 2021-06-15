@@ -75,6 +75,7 @@ public class LevelProgressTrackerScript : MonoBehaviour
             if (heartLevelComplete == true && handLevelComplete == true)
             {
                 brainButton.GetComponent<Button>().interactable = true;
+                brainButton.GetComponent<Image>().sprite = brainSick;
             }
             if (brainLevelComplete == true)
             {
@@ -106,6 +107,11 @@ public class LevelProgressTrackerScript : MonoBehaviour
         if (sceneName == "Brain level")
         {
             Debug.Log("Fuck");
+            GameObject brainGM = GameObject.Find("GM");
+            if (brainGM.GetComponent<BrainGM>().levelComplete == true)
+            {
+                brainLevelComplete = true;
+            }
         }
     }
 }

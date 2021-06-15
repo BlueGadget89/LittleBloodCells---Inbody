@@ -10,8 +10,8 @@ public class ThreeHeartDestroy : MonoBehaviour
     public GameObject playerDamageDetector;
     //Stuff for damage indicator
     Color damageColor = Color.red;
-    Color OriginalColor;
-    SpriteRenderer ColorRenderer;
+    public Color OriginalColor;
+    public SpriteRenderer ColorRenderer;
     public string sceneName;
     public Image brainLevelColorRenderer;
 
@@ -22,7 +22,7 @@ public class ThreeHeartDestroy : MonoBehaviour
     {
         if (sceneName == "Hand_Level" || sceneName == "Heart_Level")
         {
-            ColorRenderer = GetComponent<SpriteRenderer>();
+            //ColorRenderer = GetComponent<SpriteRenderer>();
             OriginalColor = ColorRenderer.material.color;
         }
         Scene currentScene = SceneManager.GetActiveScene();

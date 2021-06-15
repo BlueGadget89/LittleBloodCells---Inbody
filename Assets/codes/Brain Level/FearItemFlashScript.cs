@@ -8,6 +8,8 @@ public class FearItemFlashScript : MonoBehaviour
     public float flashTimer;
     public bool isFlashing;
     public float boolTimer;
+    public GameObject fearCamera;
+    public bool firstFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class FearItemFlashScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fearCamera.GetComponent<Camera>().enabled == true && isFlashing == false && firstFlash == false)
+        {
+            isFlashing = true;
+        }
         if (isFlashing == true)
         {
             flashTimer += Time.deltaTime;
@@ -66,6 +72,7 @@ public class FearItemFlashScript : MonoBehaviour
         if (boolTimer >= 3.15)
         {
             isFlashing = false;
+            firstFlash = true;
             boolTimer -= Time.deltaTime;
             boolTimer = 0;
         }

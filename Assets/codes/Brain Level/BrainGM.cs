@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BrainGM : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class BrainGM : MonoBehaviour
     public GameObject player;
     public GameObject playerPositionTracker;
     public Vector3 playerPos;
+    public int enemiesKilled;
+    public bool levelComplete;
+    public float sceneTransitionTimer;
+    public float loseTransitionTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +28,7 @@ public class BrainGM : MonoBehaviour
         fearCamera.GetComponent<Camera>().enabled = false;
         happyplatform.GetComponent<SpriteRenderer>().enabled = false;
         happyplatform.GetComponent<PolygonCollider2D>().enabled = false;
+        levelComplete = false;
     }
 
     // Update is called once per frame
@@ -30,6 +36,16 @@ public class BrainGM : MonoBehaviour
     {
         playerPositionTracker.GetComponent<Transform>().position = player.GetComponent<Transform>().position;
         playerPos = playerPositionTracker.GetComponent<Transform>().position;
+
+        if (player.GetComponent<PlayerMovementScript>().playerHp <= 0)
+        {
+            Debug.Log("Level Lost");
+            loseTransitionTimer += Time.deltaTime;
+        }
+        if (loseTransitionTimer >= 3)
+        {
+            SceneManager.LoadScene("BrainLevelLose");
+        }
         
         /*
         if (playerPos.x >= -32.11 && playerPos.x <= 8.06 && player.transform.IsChildOf(transform) == false)
@@ -71,7 +87,16 @@ public class BrainGM : MonoBehaviour
             angerCamera.GetComponent<Camera>().enabled = false;
             happyCamera.GetComponent<Camera>().enabled = false;
             fearCamera.GetComponent<Camera>().enabled = true;
-            player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(20, 3, 0);
+            player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(68, 2, 0);
+        }
+        if (emotionGM.GetComponent<BrainPuzzle>().happyComplete == true && emotionGM.GetComponent<BrainPuzzle>().angerComplete == true && emotionGM.GetComponent<BrainPuzzle>().fearComplete == true)
+        {
+            levelComplete = true;
+            sceneTransitionTimer += Time.deltaTime;
+        }
+        if (sceneTransitionTimer >= 3)
+        {
+            SceneManager.LoadScene("BrainLevelWin");
         }
     }
 }

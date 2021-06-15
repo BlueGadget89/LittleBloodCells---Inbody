@@ -8,7 +8,7 @@ public class Player_Damage_Script : MonoBehaviour
     public float damagetimer;
     public bool gethit;
 
-    public AudioClip playerDamaged;
+    //public AudioClip playerDamaged;
 
     public Color damageColor = Color.red;
     public Color originalColor;
@@ -19,6 +19,7 @@ public class Player_Damage_Script : MonoBehaviour
     {
         colorRenderer = player.GetComponent<SpriteRenderer>();
         originalColor = colorRenderer.material.color;
+        GetComponent<AudioSource>().enabled = false;
     }
 
     // Update is called once per frame
@@ -37,6 +38,7 @@ public class Player_Damage_Script : MonoBehaviour
             gethit = false;
             damagetimer = 0;
             colorRenderer.material.color = originalColor;
+            GetComponent<AudioSource>().enabled = false;    
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -47,8 +49,7 @@ public class Player_Damage_Script : MonoBehaviour
             {
                 player.GetComponent<PlayerMovementScript>().playerHp -= 1;
                 gethit = true;
-                GetComponent<AudioSource>().clip = playerDamaged;
-                GetComponent<AudioSource>().PlayOneShot(playerDamaged);
+                GetComponent<AudioSource>().enabled = true;
             }
         }   
     }

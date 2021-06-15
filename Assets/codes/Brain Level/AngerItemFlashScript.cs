@@ -8,6 +8,8 @@ public class AngerItemFlashScript : MonoBehaviour
     public float flashTimer;
     public bool isFlashing;
     public float boolTimer;
+    public GameObject angerCamera;
+    public bool firstFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,10 @@ public class AngerItemFlashScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (angerCamera.GetComponent<Camera>().enabled == true && isFlashing == false && firstFlash == false)
+        {
+            isFlashing = true;
+        }
         if (isFlashing == true)
         {
             flashTimer += Time.deltaTime;
@@ -60,6 +66,7 @@ public class AngerItemFlashScript : MonoBehaviour
         if (boolTimer >= 2.75)
         {
             isFlashing = false;
+            firstFlash = true;
             boolTimer -= Time.deltaTime;
             boolTimer = 0;
         }

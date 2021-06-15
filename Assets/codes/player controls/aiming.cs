@@ -61,6 +61,15 @@ public class aiming : MonoBehaviour
             Instantiate(bullet, outcomepos, transform.rotation);
             
            
+            if (mousePos.x > Player.GetComponent<Transform>().position.x)
+            {
+                Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+            }
+            if (mousePos.x <= Player.GetComponent<Transform>().position.x)
+            {
+                Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+            }
+            /*
             if (mousePos.x - Player.GetComponent<Transform>().rotation.x > 0)
             {
                 Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
@@ -69,8 +78,8 @@ public class aiming : MonoBehaviour
             {
                 Player.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
             }
-           
-            
+            */
+
             canshoot = false;
         }
         

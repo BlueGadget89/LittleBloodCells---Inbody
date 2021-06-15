@@ -5,11 +5,13 @@ using UnityEngine;
 public class LightningEffectScript : MonoBehaviour
 {
     public GameObject playerDamageDetector;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<AudioSource>().enabled = false;
     }
 
     // Update is called once per frame
@@ -17,7 +19,7 @@ public class LightningEffectScript : MonoBehaviour
     {
         if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == true)
         {
-            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
             //GetComponent<AudioSource>().Play();
             //StartCoroutine(soundEffect());
@@ -25,6 +27,7 @@ public class LightningEffectScript : MonoBehaviour
         if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == false)
         {
             GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<AudioSource>().enabled = false;
         }
     }
 

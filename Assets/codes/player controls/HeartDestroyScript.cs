@@ -10,8 +10,8 @@ public class HeartDestroyScript : MonoBehaviour
     public GameObject playerDamageDetector;
     //Stuff for damage indicator
     Color damageColor = Color.red;
-    Color OriginalColor;
-    SpriteRenderer ColorRenderer;
+    public Color OriginalColor;
+    public SpriteRenderer ColorRenderer;
     public string sceneName;
     public Image brainLevelColorRenderer;
 
@@ -22,7 +22,7 @@ public class HeartDestroyScript : MonoBehaviour
     {
         if (sceneName == "Hand_Level" || sceneName == "Heart_Level")
         {
-            ColorRenderer = GetComponent<SpriteRenderer>();
+            //ColorRenderer = GetComponent<SpriteRenderer>();
             OriginalColor = ColorRenderer.material.color;
         }
         Scene currentScene = SceneManager.GetActiveScene();
@@ -30,7 +30,7 @@ public class HeartDestroyScript : MonoBehaviour
         if (sceneName == "Brain level")
         {
             brainLevelColorRenderer = GetComponent<Image>();
-            OriginalColor = brainLevelColorRenderer.material.color;
+            OriginalColor = brainLevelColorRenderer.color;
         }
         /*
         if (sceneName == "Heart_Level")
@@ -63,11 +63,11 @@ public class HeartDestroyScript : MonoBehaviour
         {
             if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == true)
             {
-                brainLevelColorRenderer.material.color = damageColor;
+                brainLevelColorRenderer.color = damageColor;
             }
             if (playerDamageDetector.GetComponent<Player_Damage_Script>().gethit == false)
             {
-                brainLevelColorRenderer.material.color = OriginalColor;
+                brainLevelColorRenderer.color = OriginalColor;
             }
             if (Player.GetComponent<PlayerMovementScript>().playerHp == 2)
             {

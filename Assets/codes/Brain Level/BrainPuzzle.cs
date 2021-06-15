@@ -14,6 +14,8 @@ public class BrainPuzzle : MonoBehaviour
     public bool happyComplete, angerComplete, fearComplete;
     public GameObject Player;
     public GameObject playerDamage;
+    public int wrongOrderCount;
+    public GameObject happyFlash, angerFlash, fearFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class BrainPuzzle : MonoBehaviour
         correctOrder.Add(2);
         correctOrder.Add(3);
         correctOrder.Add(4);
+        wrongOrderCount = 0;
     }
 
     // Update is called once per frame
@@ -36,6 +39,11 @@ public class BrainPuzzle : MonoBehaviour
     {
         if (brainGM.GetComponent<BrainGM>().emotion == "Happy")
         {
+            if (wrongOrderCount >= 2)
+            {
+                happyFlash.GetComponent<HappyItemFlashScript>().isFlashing = true;
+                wrongOrderCount = 0;
+            }
             if (P1.GetComponent<Brain_piece_behavior>().onhit == true)
             {
                 P1hit = true;
@@ -56,7 +64,7 @@ public class BrainPuzzle : MonoBehaviour
             if (contactOrder[index] != correctOrder[index])
             {
                 StartCoroutine(ResetHappyPuzzle());
-
+                wrongOrderCount += 1;
                 Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
                 playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
             }
@@ -68,6 +76,11 @@ public class BrainPuzzle : MonoBehaviour
         }
         if (brainGM.GetComponent<BrainGM>().emotion == "Anger")
         {
+            if (wrongOrderCount >= 2)
+            {
+                angerFlash.GetComponent<AngerItemFlashScript>().isFlashing = true;
+                wrongOrderCount = 0;
+            }
             if (P1.GetComponent<Brain_piece_behavior>().onhit == true)
             {
                 P1hit = true;
@@ -93,6 +106,7 @@ public class BrainPuzzle : MonoBehaviour
                 {
                     Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
                     playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                    wrongOrderCount += 1;
                     StartCoroutine(ResetAngerPuzzle());
                 }
             //for (int index = 0; index < contactOrder.Count; index++)
@@ -104,6 +118,11 @@ public class BrainPuzzle : MonoBehaviour
         }
         if (brainGM.GetComponent<BrainGM>().emotion == "Fear")
         {
+            if (wrongOrderCount >= 2)
+            {
+                fearFlash.GetComponent<FearItemFlashScript>().isFlashing = true;
+                wrongOrderCount = 0;
+            }
             if (P1.GetComponent<Brain_piece_behavior>().onhit == true)
             {
                 P1hit = true;
@@ -133,6 +152,7 @@ public class BrainPuzzle : MonoBehaviour
                 {
                     Player.GetComponent<PlayerMovementScript>().playerHp -= 1;
                     playerDamage.GetComponent<Player_Damage_Script>().gethit = true;
+                    wrongOrderCount += 1;
                     StartCoroutine(ResetFearPuzzle());
                 }
             //for (int index = 0; index < contactOrder.Count; index++)

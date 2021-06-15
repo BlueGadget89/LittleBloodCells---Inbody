@@ -15,7 +15,7 @@ public class Brain_piece_behavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        brainGM = GameObject.Find("BrainGM");
+        brainGM = GameObject.Find("GM");
         onhit = false;
         //colorRenderer = GetComponent<SpriteRenderer>();
         //regularColor = colorRenderer.material.color;

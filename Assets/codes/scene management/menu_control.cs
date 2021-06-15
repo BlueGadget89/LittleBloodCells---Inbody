@@ -27,6 +27,7 @@ public class menu_control : MonoBehaviour
         brainLocked.SetActive(false);
         heartintro.SetActive(false);
         handintro.SetActive(true);
+        brainintro.SetActive(false);
         levelSelectText.SetActive(false);
         heartSilhouette.SetActive(false);
         handSilhouette.SetActive(false);
@@ -41,6 +42,7 @@ public class menu_control : MonoBehaviour
         brainLocked.SetActive(false);
         handintro.SetActive(false);
         heartintro.SetActive(true);
+        brainintro.SetActive(false);
         levelSelectText.SetActive(false);
         heartSilhouette.SetActive(false);
         handSilhouette.SetActive(false);

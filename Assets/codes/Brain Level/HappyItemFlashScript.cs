@@ -8,6 +8,8 @@ public class HappyItemFlashScript : MonoBehaviour
     public float flashTimer;
     public bool isFlashing;
     public float boolTimer;
+    public bool firstFlash;
+    public GameObject tutorial;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,10 @@ public class HappyItemFlashScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (tutorial.gameObject == null && isFlashing == false && firstFlash == false)
+        {
+            isFlashing = true;
+        }
         if (isFlashing == true)
         {
             flashTimer += Time.deltaTime;
@@ -54,6 +60,7 @@ public class HappyItemFlashScript : MonoBehaviour
         if (boolTimer >= 2.25)
         {
             isFlashing = false;
+            firstFlash = true;
             boolTimer -= Time.deltaTime;
             boolTimer = 0;
         }

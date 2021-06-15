@@ -1450,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1561626397, guid: 7a7a675e5413d4e98b4fe5f2dda219c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d9051c3403d64695bef48fb619778eb, type: 3}
     - target: {fileID: 4298148357543345729, guid: 7a7a675e5413d4e98b4fe5f2dda219c5,
         type: 3}
       propertyPath: Spwan.x
@@ -5440,6 +5444,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5523219389700513418}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1544382749 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1738795991577447028, guid: 39bbde456b2dc4e2daef2f2796a81433,
+    type: 3}
+  m_PrefabInstance: {fileID: 5523219389700513418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627790941
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,6 +6156,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5523219389700513418}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1773478268 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3077154023635836485, guid: 39bbde456b2dc4e2daef2f2796a81433,
+    type: 3}
+  m_PrefabInstance: {fileID: 5523219389700513418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850334343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +6302,12 @@ BoxCollider2D:
 --- !u!1 &1918866798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8113863122964206342, guid: 39bbde456b2dc4e2daef2f2796a81433,
+    type: 3}
+  m_PrefabInstance: {fileID: 5523219389700513418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1918866801 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8113863122964206337, guid: 39bbde456b2dc4e2daef2f2796a81433,
     type: 3}
   m_PrefabInstance: {fileID: 5523219389700513418}
   m_PrefabAsset: {fileID: 0}
@@ -7205,6 +7227,31 @@ PrefabInstance:
       propertyPath: playerDamageDetector
       value: 
       objectReference: {fileID: 355833652}
+    - target: {fileID: 1738795991577447034, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: ColorRenderer
+      value: 
+      objectReference: {fileID: 1544382749}
+    - target: {fileID: 1738795991577447034, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738795991577447034, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738795991577447034, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738795991577447034, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: Player
@@ -7215,6 +7262,31 @@ PrefabInstance:
       propertyPath: playerDamageDetector
       value: 
       objectReference: {fileID: 355833652}
+    - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: ColorRenderer
+      value: 
+      objectReference: {fileID: 1773478268}
+    - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077154023635836487, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5523219389862880778, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7295,5 +7367,30 @@ PrefabInstance:
       propertyPath: playerDamageDetector
       value: 
       objectReference: {fileID: 355833652}
+    - target: {fileID: 8113863122964206339, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: ColorRenderer
+      value: 
+      objectReference: {fileID: 1918866801}
+    - target: {fileID: 8113863122964206339, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113863122964206339, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113863122964206339, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113863122964206339, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: OriginalColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39bbde456b2dc4e2daef2f2796a81433, type: 3}
