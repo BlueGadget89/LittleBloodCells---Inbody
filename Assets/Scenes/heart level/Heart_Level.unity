@@ -4708,7 +4708,7 @@ GameObject:
   - component: {fileID: 1320005221}
   - component: {fileID: 1320005220}
   m_Layer: 0
-  m_Name: heart_1_1
+  m_Name: heart1indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4939,6 +4939,26 @@ PrefabInstance:
     - target: {fileID: 1518104704606869825, guid: 88de1106ffa414b2a957018b08b4b9ac,
         type: 3}
       propertyPath: angle
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518104704606869825, guid: 88de1106ffa414b2a957018b08b4b9ac,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 735786398}
+    - target: {fileID: 1518104704606869827, guid: 88de1106ffa414b2a957018b08b4b9ac,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518104704606869827, guid: 88de1106ffa414b2a957018b08b4b9ac,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518104704606869827, guid: 88de1106ffa414b2a957018b08b4b9ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1518104705501183338, guid: 88de1106ffa414b2a957018b08b4b9ac,
@@ -6081,7 +6101,7 @@ GameObject:
   - component: {fileID: 1772811499}
   - component: {fileID: 1772811498}
   m_Layer: 0
-  m_Name: heart_1_3
+  m_Name: heart2indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

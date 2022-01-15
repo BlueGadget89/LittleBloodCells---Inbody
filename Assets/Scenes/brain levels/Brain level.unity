@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3003f3cc78844953ba995bfc282609c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.13
+  movespeed: 0.09
   moverange: 15
   endpoint: 0
   stage1: 0
@@ -812,7 +812,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.299538
+  orthographic size: 11.264351
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2606,12 +2606,17 @@ PrefabInstance:
     - target: {fileID: 5523219389862881013, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: orthographic size
-      value: 11.29954
+      value: 11.2
       objectReference: {fileID: 0}
     - target: {fileID: 5523219389862881013, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
       propertyPath: m_Depth
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523219389862881013, guid: 39bbde456b2dc4e2daef2f2796a81433,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523219389862881014, guid: 39bbde456b2dc4e2daef2f2796a81433,
         type: 3}
@@ -3865,7 +3870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998917232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.24, y: -6.12, z: 18.390625}
+  m_LocalPosition: {x: -14.24, y: -7.78, z: 18.390625}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 713984824}
@@ -3909,8 +3914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e198dbe8db50247c397f3575cc81f432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.1
-  moverange: 9
+  movespeed: 0.075
+  moverange: 7
   endpoint: 0
   stage1: 0
   stage2: 0
@@ -4667,7 +4672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213077236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.15, y: -7, z: 80.86881}
+  m_LocalPosition: {x: 10.15, y: -4.28, z: 80.86881}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 375064719}
@@ -4685,7 +4690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e198dbe8db50247c397f3575cc81f432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.09
+  movespeed: 0.075
   moverange: 15
   endpoint: 0
   stage1: 0
@@ -7117,7 +7122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618921229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.2, y: 0.31, z: 15.065932}
+  m_LocalPosition: {x: -23.85, y: 0.31, z: 15.065932}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 2035716863}
@@ -10023,7 +10028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e198dbe8db50247c397f3575cc81f432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.1
+  movespeed: 0.075
   moverange: 15
   endpoint: 0
   stage1: 0

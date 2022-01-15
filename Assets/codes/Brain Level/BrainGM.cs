@@ -63,30 +63,29 @@ public class BrainGM : MonoBehaviour
             emotion = "Anger";
             happyplatform.GetComponent<SpriteRenderer>().enabled = true;
             happyplatform.GetComponent<PolygonCollider2D>().enabled = true;
-        }
-        if (playerPositionTracker.GetComponent<Transform>().position.x >= 20 && playerPositionTracker.GetComponent<Transform>().position.x <= 57.32 && emotionGM.GetComponent<BrainPuzzle>().angerComplete == false)
-        {
-            //playerCamera.GetComponent<Camera>().enabled = false;
-            //angerCamera.GetComponent<Camera>().enabled = true;
             happyCamera.GetComponent<Camera>().enabled = false;
+            playerCamera.GetComponent<Camera>().enabled = true;
+        }
+        if (playerPositionTracker.GetComponent<Transform>().position.x >= 15 && playerPositionTracker.GetComponent<Transform>().position.x <= 57.32 && emotionGM.GetComponent<BrainPuzzle>().angerComplete == false)
+        {
+            playerCamera.GetComponent<Camera>().enabled = false;
+            angerCamera.GetComponent<Camera>().enabled = true;
             player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(20, 3, 0);
         }
         if (emotionGM.GetComponent<BrainPuzzle>().angerComplete == true)
         {
-            angerCamera.GetComponent<Camera>().enabled = false;
-            playerCamera.GetComponent<Camera>().enabled = true;
             Debug.Log("anger complete");
             fearblock.GetComponent<BoxCollider2D>().enabled = false;
             emotion = "Fear";
             angerplatform.GetComponent<SpriteRenderer>().enabled = true;
             angerplatform.GetComponent<PolygonCollider2D>().enabled = true;
+            angerCamera.GetComponent<Camera>().enabled = false;
+            playerCamera.GetComponent<Camera>().enabled = true;
         }
         if (playerPositionTracker.GetComponent<Transform>().position.x >= 63)
         {
-            //playerCamera.GetComponent<Camera>().enabled = false;
-            angerCamera.GetComponent<Camera>().enabled = false;
-            happyCamera.GetComponent<Camera>().enabled = false;
-            //fearCamera.GetComponent<Camera>().enabled = true;
+            playerCamera.GetComponent<Camera>().enabled = false;
+            fearCamera.GetComponent<Camera>().enabled = true;
             player.GetComponent<PlayerMovementScript>().Spwan = new Vector3(68, 2, 0);
         }
         if (emotionGM.GetComponent<BrainPuzzle>().happyComplete == true && emotionGM.GetComponent<BrainPuzzle>().angerComplete == true && emotionGM.GetComponent<BrainPuzzle>().fearComplete == true)
@@ -97,16 +96,6 @@ public class BrainGM : MonoBehaviour
         if (sceneTransitionTimer >= 3)
         {
             SceneManager.LoadScene("BrainLevelWin");
-        }
-        if (playerCamera.GetComponent<Transform>().position.x >= 34.83 && playerPositionTracker.GetComponent<Transform>().position.x <= 49.78493)
-        {
-            playerCamera.GetComponent<Camera>().enabled = false;
-            angerCamera.GetComponent<Camera>().enabled = true;
-        }
-        else if (playerCamera.GetComponent<Transform>().position.x >= 78.56832)
-        {
-            playerCamera.GetComponent<Camera>().enabled = false;
-            fearCamera.GetComponent<Camera>().enabled = true;
         }
     }
 }
